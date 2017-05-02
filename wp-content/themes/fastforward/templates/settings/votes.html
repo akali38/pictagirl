@@ -1,0 +1,24 @@
+<div class="setting-template-container">
+    <div class="form-group">
+        <label>{{'Enable likes'|translate}}</label>
+        <div>
+            <select data-monstro-switch data-target="settings.votes.enable">
+                <option value="1">{{'Enable'|translate}}</option>
+                <option value="0">{{'Disable'|translate}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>{{'Icon style'|translate}}</label>
+        <div>
+            <select ng-model="settings.votes.icon" class="input-sm">
+                <option value="smiley">{{'Smiley'|translate}}</option>
+                <option value="arrow">{{'Arrow'|translate}}</option>
+                <option value="heart">{{'Heart'|translate}}</option>
+                <option value="thumbs">{{'Thumbs'|translate}}</option>
+                <option value="equation">{{'Equation'|translate}}</option>
+            </select>
+        </div>
+    </div>
+</div>

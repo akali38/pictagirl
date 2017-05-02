@@ -1,0 +1,16 @@
+<div class="well clearfix" data-ng-repeat="sidebar in sidebars">
+    <div class="col-md-9">
+        <input class="form-control" type="text" placeholder="{{__('Add new sidebar')}}" data-ng-model="sidebar.name"/>
+    </div>
+    <div class="btn btn-danger col-md-3" data-ng-click="remove(sidebar)">{{__('Delete')}}</div>
+</div>
+<form class="well clearfix" data-ng-submit="add()">
+    <div class="col-md-9">
+        <input class="form-control" type="text" placeholder="{{__('Add new sidebar')}}" data-ng-model="newSidebar"/>
+    </div>
+    <div class="btn btn-primary col-md-3" data-ng-click="add()">{{__('Add')}}</div>
+</form>
+<div class="row text-right" data-ng-show="haveChanges()">
+    <div class="btn btn-success col-md-4" data-ng-click="save()">{{__('Save')}}</div>
+    <div class="btn btn-success col-md-4" data-ng-click="discard()">{{__('Discard')}}</div>
+</div>

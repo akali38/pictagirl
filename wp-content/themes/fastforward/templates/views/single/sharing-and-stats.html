@@ -1,0 +1,17 @@
+
+<div class="large-8 small-6 columns">
+    <div class="monstro-stats">
+        <ul>
+            <li>
+                <strong data-ng-bind="post.views"></strong>
+                <span ng-pluralize count="post.views" when="pluralizeViews"></span>
+            </li>
+        </ul>
+    </div>
+    <div class="socialicons share" monstro-sharing="post.permalink"></div>
+</div>
+<div class="large-4 small-6 columns">
+    <div class="monstro-vote monstro-toggleable-element" ng-controller="VotesCtrl" ng-if="1 == settings.votes.enable"
+            ng-include="tdu + '/templates/views/single/votes.html'">
+    </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="setting-template-container" ng-controller="GeneralSettingsCtrl">
+    <div class="form-group">
+        <lengend>
+            <h4 translate>Force reload</h4>
+        </lengend>
+        <div>
+            <select data-monstro-switch data-target="settings.general.reload">
+                <option value="1" translate>Enable</option>
+                <option value="0" translate>Disable</option>
+            </select>
+            <div class="help-block" translate>
+                Some plugins(especially those that require additional scripts) might misbehave when loaded via AJAX. Try enabling this option if you are having such problems.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <lengend>
+            <h4 translate>Loading animation</h4>
+        </lengend>
+        <select data-ng-model="settings.loading.animation" class="input-sm">
+            <option value="none" translate>None</option>
+            <option value="youtube" translate>Youtube</option>
+            <option value="fill-up-from-left" translate>Fill up from left</option>
+            <option value="fill-up-from-down" translate>Fill up from down</option>
+            <option value="expanding-box" translate>Expanding box</option>
+            <option value="3d-bar-bottom" translate>3D bar bottom</option>
+            <option value="center-expanding-line" translate>Center expanding line</option>
+            <option value="fill-sides" translate>Fill sides</option>
+            <option value="surrounding-borders" translate>Surrounding borders</option>
+            <option value="corner-indicator" translate>Corner indicator</option>
+            <option value="big-counter" translate>Big counter</option>
+            <option value="flat-bar-top" translate>Flat bar top</option>
+            <option value="pie" translate>Pie</option>
+        </select>
+    </div>
+
+    <fieldset>
+        <lengend>
+            <h4 translate>Google analytics code</h4>
+        </lengend>
+        <div>
+            <div class="form-group">
+                <label translate>Paste your code here</label>
+                <div>
+                    <textarea ng-model="settings.general.googleAnalytics"></textarea>
+                </div>
+                <div class="help-block translate">Setting is automatically saved. Just refresh the page to see your code.</div>
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="form-group">
+        <lengend>
+            <h4 translate>Default settings</h4>
+        </lengend>
+        <div>
+            <div class="btn btn-warning btn-sm" ng-click="loadDefaults()" translate>Load default settings</div>
+        </div>
+    </div>
+</div>

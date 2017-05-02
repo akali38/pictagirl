@@ -1,0 +1,119 @@
+<div class="setting-template-container" ng-controller="ContentAllSettingsCtrl">
+    <!--<div class="form-group">-->
+        <!--<div>-->
+            <!--<a ng-href="{{anchorPrefix()}}content-all" class="btn btn-default col-md-12 text-left navigation-item">-->
+                <!--<i class="back-icon-doc"></i>{{'All pages'|translate}}<i class="glyphicon glyphicon-chevron-right pull-right"></i>-->
+            <!--</a>-->
+            <!--<div class="help-block">-->
+                <!--{{'Customize all the pages at once'|translate}}-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <fieldset>
+        <legend>
+            <h4>{{'Pages'|translate}}<small>{{'Customize pages individually'|translate}}</small></h4>
+        </legend>
+        <div class="navigation-inside">
+            <div class="form-group clearfix">
+                <div>
+                    <a ng-href="{{anchorPrefix()}}content-frontPage" class="btn btn-default col-md-12 text-left navigation-item">
+                        <i class="back-icon-note"></i>{{'Front page'|translate}}<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="form-group clearfix">
+                <div>
+                    <a ng-href="{{anchorPrefix()}}content-page" class="btn btn-default col-md-12 text-left navigation-item">
+                        <i class="back-icon-doc-1"></i>{{'Pages'|translate}}<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="form-group clearfix">
+                <div>
+                    <a ng-href="{{anchorPrefix()}}content-post" class="btn btn-default col-md-12 text-left navigation-item">
+                        <i class="back-icon-edit"></i>{{'Posts'|translate}}<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="form-group clearfix">
+                <div>
+                    <a ng-href="{{anchorPrefix()}}content-video" class="btn btn-default col-md-12 text-left navigation-item">
+                        <i class="back-icon-videocam"></i>{{'Videos'|translate}}<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="form-group clearfix">
+                <div>
+                    <a ng-href="{{anchorPrefix()}}content-gallery" class="btn btn-default col-md-12 text-left navigation-item">
+                        <i class="icon-gallery"></i>{{'Gallery'|translate}}<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="form-group clearfix">
+                <div>
+                    <a ng-href="{{anchorPrefix()}}content-postArchive" class="btn btn-default col-md-12 text-left navigation-item">
+                        <i class="back-icon-docs"></i>{{'Post archives'|translate}}<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="form-group clearfix">
+                <div>
+                    <a ng-href="{{anchorPrefix()}}content-videoArchive" class="btn btn-default col-md-12 text-left navigation-item">
+                        <i class="back-icon-video-alt"></i>{{'Video archives'|translate}}<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="form-group clearfix">
+                <div>
+                    <a ng-href="{{anchorPrefix()}}content-galleryArchive" class="btn btn-default col-md-12 text-left navigation-item">
+                        <i class="back-icon-art-gallery"></i>{{'Gallery archives'|translate}}<i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h4>{{'Page animations'|translate}}</h4>
+        </legend>
+        <div class="">
+            <div class="form-group clearfix">
+                <label>{{'Animation type'|translate}}</label>
+                <div>
+                    <select data-ng-model="settings.contentLayouts.pageAnimation" class="input-sm col-md-12" data-ng-change="state.customizer.content.triggerPageTransitions()">
+                        <option value="none">{{'No animation'|translate}}</option>
+                        <option value="show-hide">{{'Show/Hide'|translate}}</option>
+                        <option value="fade">{{'Fade'|translate}}</option>
+                        <optgroup label="{{'Move'|translate}}">
+                            <option value="move-horizontal" translate>Move horizontally</option>
+                            <option value="move-vertical" translate>Move vertically</option>
+                        </optgroup>
+                        <optgroup label="{{'Scale'|translate}}">
+                            <option value="grow" translate>Grow</option>
+                            <option value="shrink" translate>Shrink</option>
+                        </optgroup>
+                        <optgroup label="{{'Flip'|translate}}">
+                            <option value="flip-top" translate>Flip top</option>
+                            <option value="flip-bottom" translate>Flip bottom</option>
+                        </optgroup>
+                        <optgroup label="{{'Rotate'|translate}}">
+                            <option value="newspaper" translate>Newspaper</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group clearfix" data-ng-hide="'none' == settings.contentLayouts.pageAnimation">
+                <div>
+                    <div class="btn btn-default btn-sm" data-ng-click="triggerPageTransition()"><i class="back-icon-play-1"></i> {{'Play animation'|translate}}</div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

@@ -1,0 +1,7 @@
+<div class="post-author-box">
+    <a data-ng-href="{{post.author.url}}" data-ng-bind-html="post.author.avatar"></a>
+    <h5 class="author-title">
+        <a ng-href="{{post.author.website || post.author.url}}" title="{{('Visit' | translate) + ' ' + post.author.name + ('\'s site' | translate)}}" rel="author external">{{post.author.name}}</a>
+    </h5>
+    <div class="author-box-info" ng-if="post.author.bio">{{post.author.bio}}</div>
+</div>

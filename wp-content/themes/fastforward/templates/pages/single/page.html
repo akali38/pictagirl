@@ -1,0 +1,106 @@
+<div class="row">
+    <div class="large-9 medium-8 columns content-left">
+        <article class="status-publish format-image post-cblock">
+            <header class="entry-header meta-above"><!-- Available classes .no-meta .meta-below and .meta-above  -->
+                <div class="entry-meta">
+                    <ul>
+                        <li>{{__('By')}} <a href="{{WPData.post.author.url}}" data-ui-sref="home.archive.author({author:WPData.post.author.id})">{{WPData.post.author.name}}</a></li>
+                        <li>{{__('on')}} <a href="{{WPData.post.date.url}}" data-ui-sref="home.archive.date({m:WPData.post.date.m})">{{WPData.post.date.text}}</a></li>
+                        <li><a class="comment" href="/gag/apqN1jb#comment" target="_blank"><span>8 comments</span></a></li>
+                    </ul>
+                </div>
+
+                <h2 class="post-title">
+                    <a data-post-id="370" data-post-type="post" href="#" title="Permalink to  Scelerisque lectus, in auctor" rel="bookmark">{{WPData.post.post_title}}</a>
+                </h2>
+                <div class="row margin-bottom-30" data-ng-if="state.content.single.sharingAndStats.showAbove()" data-ng-include="state.content.single.sharingAndStats.template()"></div>
+                <div class="featimg" ng-if="WPData.post.featimg">
+                    <a class="image" href="#" title="Permalink to  Scelerisque lectus, in auctor erat" rel="bookmark">
+                        <img data-ng-src="{{WPData.post.featimg}}" alt="{{WPData.post.post_title}}" />
+                    </a>
+                </div>
+            </header>
+            <section class="entry-content">
+                <div class="entry-content" data-ng-bind-html="WPData.post.post_content">
+                </div>
+            </section>
+            <footer class="entry-footer">
+                <div class="row" data-ng-if="state.content.single.sharingAndStats.showBelow()" data-ng-include="state.content.single.sharingAndStats.template()"></div>
+                <div class="monstro-comments">
+                    <ul class="comments-tabs">
+                        <li id="tab-wp" class="active"><a href="javascript:void(0)" class="tab active">WordPress comments (1 Comment)</a></li>
+                        <li id="tab-fb"><a href="javascript:void(0)" class="tab">Facebook comments (<fb:comments-count href="http://rewind.monstrothemes.com/2013/03/29/maecenas-dictum-tortor-eu-est/" fb-xfbml-state="rendered" class=""><span class="fb_comments_count">3</span></fb:comments-count>)</a></li></ul>
+                    <div class="comments-relative">
+                        <div id="content-wp" class="content">
+                            <div class="row"><div id="comments" class="large-12 columns">
+                                <h3 class="comments-title" id="comments-title"><span>1 Comment</span></h3>
+                                <ol class="monstro-comment-list monstro-comment-plain">
+                                    <li class="comment byuser comment-author-monstrothemes bypostauthor even thread-even depth-1" id="li-comment-12">
+                                        <article id="comment-12" class="comment-body">
+                                            <div class="monstro-comment-thumb"><img alt="" src="http://1.gravatar.com/avatar/76f55cd2ada98ae105f1e3037ecc4641?s=70&amp;d=http%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D70&amp;r=G" class="avatar avatar-70 photo" height="70" width="70"></div>
+                                            <div class="monstro-comment-leftpointer"></div>
+                                            <div class="monstro-comment-quote">
+                                                <header class="monstro-comment-textinfo st">
+                                                    <span class="user">by <a href="http://monstrothemes.com" rel="external nofollow" class="url">MonstroThemes</a></span>
+                                                    <span class="time">on December 5, 2013&nbsp;&nbsp;4:32 pm</span>
+
+                                                    <span class="gray reply fr"><a class="comment-reply-link" href="/2013/03/29/maecenas-dictum-tortor-eu-est/?replytocom=12#respond" onclick="return addComment.moveForm(&quot;comment-12&quot;, &quot;12&quot;, &quot;respond&quot;, &quot;269&quot;)">Reply</a></span>
+                                                </header>
+                                                <p> this is a comment                            </p>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <!-- #comment-## -->
+                                </ol>
+                                <div class="row">								<div id="respond" class="comment-respond">
+                                    <h3 id="reply-title" class="comment-reply-title"><span>Leave a reply</span> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2013/03/29/maecenas-dictum-tortor-eu-est/#respond" style="display:none;">Cancel reply</a></small></h3>
+                                    <form action="http://rewind.monstrothemes.com/wp-comments-WPData.post.php" method="post" id="commentform" class="comment-form">
+                                        <div class="large-12 columns"><p class="comment-notes st">Your email address will not be published.</p></div>							<div class="large-6 columns"><p class="comment-form-author input"><input class="required" placeholder="Your name" id="author" name="author" type="text" value="" size="30"></p>
+                                        <p class="comment-form-email input"><input class="required" id="email" name="email" placeholder="Your email" type="text" value="" size="30"></p>
+                                        <p class="comment-form-url input"><input id="url" name="url" type="text" value="" placeholder="Website" size="30"></p></div>
+                                        <div class="large-6 columns"><p class="comment-form-comment textarea"><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true"></textarea></p></div>												<p class="form-submit">
+                                        <input name="submit" type="submit" id="submit" value="Add comment">
+                                        <input type="hidden" name="comment_post_ID" value="269" id="comment_post_ID">
+                                        <input type="hidden" name="comment_parent" id="comment_parent" value="0">
+                                    </p>
+                                    </form>
+                                </div><!-- #respond -->
+                                </div>
+                            <!--</div>&lt;!&ndash; #comments &ndash;&gt;</div> </div> <div id="content-fb" class="content"><div id="comments"><h3 id="reply-title" class="fb-reply-title">Leave a reply</h3><fb:comments href="http://rewind.monstrothemes.com/2013/03/29/maecenas-dictum-tortor-eu-est/" num_posts="5" width="790" height="120" reverse="true" fb-xfbml-state="rendered" class="fb_iframe_widget" style="width: 100%;"><span style="height: 776px; width: 100%;"><iframe id="fdccdbc74" name="f34b645dfc" scrolling="no" title="Facebook Social Plugin" class="fb_ltr" src="https://www.facebook.com/plugins/comments.php?api_key=&amp;channel_url=http%3A%2F%2Fstatic.ak.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D28%23cb%3Df75a85df%26domain%3Drewind.monstrothemes.com%26origin%3Dhttp%253A%252F%252Frewind.monstrothemes.com%252Ff2b0c72468%26relation%3Dparent.parent&amp;href=http%3A%2F%2Frewind.monstrothemes.com%2F2013%2F03%2F29%2Fmaecenas-dictum-tortor-eu-est%2F&amp;locale=en_US&amp;numposts=5&amp;sdk=joey&amp;width=790" style="border: none; overflow: hidden; height: 776px; width: 100%;"></iframe></span></fb:comments></div></div></div>-->
+                </div>
+            </footer>
+
+        </article>
+
+    </div>
+
+    <div class="large-3 medium-4 columns sidebar-right">
+        <aside id="widget_cosmo_custom_post-3" class="widget">
+            <div class="widget_custom_post">
+                <h5 class="widget-title"><span>Latest portfolios</span></h5>
+                <div class="widget-delimiter">&nbsp;</div>
+                <ul class="widget-list">
+                    <li>
+                        <article class="row">
+                            <div class="four mobile-one columns">
+                                <a class="entry-img" href="http://demo.cosmothemes.com/triangulo-light/portfolio/duis-tincidunt-semper-leo-ut-quis/"><img width="150" height="150" src="http://demo.cosmothemes.com/triangulo-light/wp-content/uploads/sites/34/2013/01/865911252_b60b856b8e_o-150x150.jpg" class="attachment-thumbnail" alt="865911252_b60b856b8e_o"></a>
+                            </div>
+                            <div class="eight mobile-three columns">
+                                <h6><a href="http://demo.cosmothemes.com/triangulo-light/portfolio/duis-tincidunt-semper-leo-ut-quis/">Duis tincidunt semper</a></h6>
+                                <div class="widget-meta">
+                                    <ul>
+                                        <li class=" thelike">
+															<span onclick="javascript:act.like(1297, '.like-1297'  );" class="meta-likes like ilove set-like voteaction">
+																<em class="like-btn icon-like"></em><i class="like-count like-1297">85</i>
+															</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+</div><!-- EOF .row -->

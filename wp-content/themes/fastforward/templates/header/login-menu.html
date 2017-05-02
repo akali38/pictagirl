@@ -1,0 +1,25 @@
+<ul class="login-menu">
+    <li>
+        <a class="user-icon" ng-href="{{loginUrl}}"><span class="icon-login"></span></a>
+        <ul ng-if="user.ID" class="login-options">
+            <li class="submit-post">
+                <a ng-href="{{specialPages.frontendPosting.addNew}}" translate>Submit image or video</a>
+            </li>
+            <li class="added-posts">
+                <a ng-href="{{user.userPages.added}}">Added posts</a>
+            </li>
+            <li class="liked-posts" ng-if="user.userPages.liked">
+                <a href="{{user.userPages.liked}}" translate>Liked posts</a>
+            </li>
+            <li class="disliked-posts" ng-if="user.userPages.disliked">
+                <a href="{{user.userPages.disliked}}" translate>Disliked posts</a>
+            </li>
+            <li class="viewed-posts" ng-if="user.userPages.viewed">
+                <a href="{{user.userPages.viewed}}" translate>Viewed posts</a>
+            </li>
+            <li class="logout">
+                <a data-ng-href="{{logoutUrl}}" translate>Logout</a>
+            </li>
+        </ul>
+    </li>
+</ul>

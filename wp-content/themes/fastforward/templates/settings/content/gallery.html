@@ -1,0 +1,135 @@
+
+<div class="setting-template-container" ng-controller="ContentSettingsCtrl" ng-init="currentSettingsContentLayout = 'post'">
+    <div class="form-group">
+        <label>{{'Width'|translate}}</label>
+        <div>
+            <div data-monstro-image-select="adminImageSelects.layoutWidth" data-target="settings.contentLayouts.gallery.width"></div>
+        </div>
+    </div>
+
+    <div class="form-group" data-ng-show="'full' != settings.contentLayouts.gallery.width && 'left' != settings.header.type">
+        <label>{{'Layout position'|translate}}</label>
+        <div>
+            <div data-monstro-image-select="adminImageSelects.layoutPosition" data-target="settings.contentLayouts.gallery.position"></div>
+        </div>
+    </div>
+
+    <fieldset data-ng-show="'full' != settings.contentLayouts.gallery.width && 'left' != settings.header.type">
+        <legend>
+            <h4>
+                {{'Boxed version'|translate}}
+                <small>
+                    {{'If enabled it will add a white background for content. We recommend to set a background color in'|translate}}
+                    <a href="themes.php?page=custom-background">{{'Appearence -> Background'|translate}}</a>
+                    {{'for better contrasting visual effect.'|translate}}
+                </small>
+            </h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label>{{'Boxed header'|translate}}</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.contentLayouts.gallery.boxedHeader">
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{'Boxed content'|translate}}</label>
+                <div>
+                    <select monstro-switch target="settings.contentLayouts.gallery.boxedContent">
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{'Boxed footer'|translate}}</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.contentLayouts.gallery.boxedFooter">
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h4>{{'Sharing and stats'|translate}}</h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label>{{'Show below content'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.gallery.sharingAndStats.showBelow" data-monstro-switch>
+                        <option value="1">{{'Show'|translate}}</option>
+                        <option value="0">{{'Hide'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h4>{{'Post settings'|translate}}</h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label>{{'Meta'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.gallery.metaPosition" data-monstro-switch>
+                        <option value="no">{{'No meta'|translate}}</option>
+                        <option value="above">{{'Meta above'|translate}}</option>
+                        <option value="below">{{'Meta below'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{'Show author box'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.gallery.showAuthorBox" data-monstro-switch>
+                        <option value="1">{{'Show'|translate}}</option>
+                        <option value="0">{{'Hide'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{'Enable Facebook comments'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.gallery.enableFacebookComments" data-monstro-switch>
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{'Show related posts'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.gallery.related.show" data-monstro-switch>
+                        <option value="1">{{'Show'|translate}}</option>
+                        <option value="0">{{'Hide'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-if="1 == settings.contentLayouts.gallery.related.show">
+                <label>{{'Show related posts for'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.gallery.related.taxonomy" data-monstro-switch>
+                        <option value="post_tag">{{'Tags'|translate}}</option>
+                        <option value="category">{{'Categories'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

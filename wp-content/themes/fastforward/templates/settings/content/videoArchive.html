@@ -1,0 +1,277 @@
+<div class="setting-template-container" ng-controller="ContentSettingsCtrl" ng-init="currentSettingsContentLayout = 'videoArchive'">
+<div class="form-group">
+    <label>{{'Front page width'|translate}}</label>
+    <div>
+        <div data-monstro-image-select="adminImageSelects.layoutWidth" data-target="settings.contentLayouts.videoArchive.width"></div>
+    </div>
+</div>
+
+<div class="form-group" data-ng-show="'full' != settings.contentLayouts.videoArchive.width && 'left' != settings.header.type">
+    <label>{{'Front-page layout position'|translate}}</label>
+    <div>
+        <div data-monstro-image-select="adminImageSelects.layoutPosition" data-target="settings.contentLayouts.videoArchive.position"></div>
+    </div>
+</div>
+
+<div class="form-group">
+    <label>{{'Front page view type'|translate}}</label>
+    <div>
+        <div class="make-room-for-three" data-monstro-image-select="adminImageSelects.viewTypes" data-target="settings.contentLayouts.videoArchive.viewType"></div>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="help-block translate">Set image resize method and values at <a href="#customize-imagesizes">Images sizes</a></div>
+</div>
+
+<div class="form-group">
+    <label>{{'Pagination type'|translate}}</label>
+    <div>
+        <select target="settings.contentLayouts.videoArchive.pagination" data-monstro-switch>
+            <option value="pagination">{{'Classic'|translate}}</option>
+            <option value="load-more">{{'Load more'|translate}}</option>
+            <option value="infinite">{{'Infinite scroll'|translate}}</option>
+        </select>
+    </div>
+</div>
+
+<fieldset data-ng-show="'grid' == settings.contentLayouts.videoArchive.viewType || 'thumb' == settings.contentLayouts.videoArchive.viewType">
+    <legend>
+        <h4>{{'Grid view and thumb view options'|translate}}</h4>
+    </legend>
+    <div class="">
+        <div class="form-group">
+            <label>{{'Number of columns'|translate}}</label>
+            <div>
+                <div data-monstro-image-select="adminImageSelects.columns" data-target="settings.contentLayouts.videoArchive.columns"></div>
+            </div>
+        </div>
+
+        <div class="form-group clearfix" monstro-json="animations" src="tdu + '/json/animations/hover.json'">
+            <label translate>Hover animation</label>
+            <div>
+                <select ng-model="settings.contentLayouts.videoArchive.hoverAnimation" class="input-sm col-md-12"
+                        ng-options="animation.class as animation.name for animation in animations">
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group clearfix" monstro-json="animations" src="tdu + '/json/animations/grid.json'">
+            <label>{{'Post animation'|translate}}</label>
+            <div>
+                <select ng-model="settings.contentLayouts.videoArchive.postAnimations.grid" class="input-sm col-md-12"
+                        ng-options="animation.class as animation.name for animation in animations">
+                </select>
+            </div>
+        </div>
+
+        <!--<div class="form-group">-->
+            <!--<div>-->
+                <!--<div class="btn btn-default btn-sm" data-ng-click="state.customizer.content.triggerPostTransitions()"><i class="glyphicon glyphicon-play"></i> {{'Play animation'|translate}}</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</fieldset>
+
+<fieldset data-ng-show="'list' == settings.contentLayouts.videoArchive.viewType">
+    <legend>
+        <h4>{{'List view options'|translate}}</h4>
+    </legend>
+    <div>
+        <div class="form-group">
+            <label>{{'Meta'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.metaPosition" data-monstro-switch>
+                    <option value="no">{{'No meta'|translate}}</option>
+                    <option value="above">{{'Meta above'|translate}}</option>
+                    <option value="below">{{'Meta below'|translate}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>{{'Show number of views'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.showViews" data-monstro-switch>
+                    <option value="1">{{'Show'|translate}}</option>
+                    <option value="0">{{'Hide'|translate}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>{{'Show social sharing'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.showSocial" data-monstro-switch>
+                    <option value="1">{{'Show'|translate}}</option>
+                    <option value="0">{{'Hide'|translate}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>{{'Show "Full story" link'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.showFullStory" data-monstro-switch>
+                    <option value="1">{{'Show'|translate}}</option>
+                    <option value="0">{{'Hide'|translate}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group clearfix" monstro-json="animations" src="tdu + '/json/animations/grid.json'">
+            <label>{{'Post animation'|translate}}</label>
+            <div>
+                <select ng-model="settings.contentLayouts.videoArchive.postAnimations.grid" class="input-sm col-md-12"
+                        ng-options="animation.class as animation.name for animation in animations">
+                </select>
+            </div>
+        </div>
+        <!--<div class="form-group">-->
+            <!--<div>-->
+                <!--<div class="btn btn-default btn-sm" data-ng-click="state.customizer.content.triggerPostTransitions()"><i class="glyphicon glyphicon-play"></i> {{'Play animation'|translate}}</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</fieldset>
+
+<fieldset data-ng-show="'full' != settings.contentLayouts.videoArchive.width && 'left' != settings.header.type">
+    <legend>
+        <h4>
+            {{'Boxed version'|translate}}
+            <small>
+                {{'If enabled it will add a white background for front page content. We recommend to set a background color in'|translate}}
+                <a href="themes.php?page=custom-background">{{'Appearence -> Background'|translate}}</a>
+                {{'for better contrasting visual effect.'|translate}}
+            </small>
+        </h4>
+    </legend>
+    <div class="">
+        <div class="form-group">
+            <label>{{'Boxed header'|translate}}</label>
+            <div>
+                <select data-monstro-switch data-target="settings.contentLayouts.videoArchive.boxedHeader">
+                    <option value="1">{{'Enable'|translate}}</option>
+                    <option value="0">{{'Disable'|translate}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>{{'Boxed content'|translate}}</label>
+            <div>
+                <select monstro-switch target="settings.contentLayouts.videoArchive.boxedContent">
+                    <option value="1">{{'Enable'|translate}}</option>
+                    <option value="0">{{'Disable'|translate}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>{{'Boxed footer'|translate}}</label>
+            <div>
+                <select data-monstro-switch data-target="settings.contentLayouts.videoArchive.boxedFooter">
+                    <option value="1">{{'Enable'|translate}}</option>
+                    <option value="0">{{'Disable'|translate}}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend>
+        <h4>{{'Sidebar'|translate}}</h4>
+    </legend>
+    <div class="">
+        <div class="form-group">
+            <label>
+                {{'Choose sidebar'|translate}}
+            </label>
+            <div>
+                <select class="input-sm" data-ng-model="settings.contentLayouts.videoArchive.sidebar.id"
+                        ng-options="sidebar.id as sidebar.name for sidebar in sidebars">
+                    <option value="">{{'No sidebar'|translate}}</option>
+                </select>
+                <div class="help-block">
+                    {{'You can create sidebars'|translate}}
+                    <a data-ng-href="{{sidebarManagerLink}}">{{'here.'|translate}}</a><br/>
+                    {{'You can add widgets to sidebars'|translate}}
+                    <a target="_blank" data-ng-href="{{widgetsLink}}">{{'here.'|translate}}</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-if="settings.contentLayouts.videoArchive.sidebar.id">
+            <label>{{'Sidebar position'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.sidebar.position" data-monstro-switch>
+                    <option value="left">{{'Left sidebar'|translate}}</option>
+                    <option value="right">{{'Right sidebar'|translate}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-if="settings.contentLayouts.videoArchive.sidebar.id">
+            <label>{{'Sidebar size'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.sidebar.size" data-monstro-switch>
+                    <option value="1/6">1/6</option>
+                    <option value="1/4">1/4</option>
+                    <option value="1/3">1/3</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-if="settings.contentLayouts.videoArchive.sidebar.id">
+            <label>{{'Delimited sidebar'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.sidebar.delimited" data-monstro-switch>
+                    <option value="1">{{'Enable'|translate}}</option>
+                    <option value="0">{{'Disable'|translate}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-if="settings.contentLayouts.videoArchive.sidebar.id && !isAnythingBoxed() && ('full' != settings.contentLayouts.videoArchive.width)">
+            <label>{{'Floating sidebar'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.sidebar.floating" data-monstro-switch>
+                    <option value="1">{{'Enable'|translate}}</option>
+                    <option value="0">{{'Disable'|translate}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-if="settings.contentLayouts.videoArchive.sidebar.id">
+            <label>{{'Hide sidebar on mobile'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.sidebar.hideForSmall" data-monstro-switch>
+                    <option value="1">{{'Hide'|translate}}</option>
+                    <option value="0">{{"Don't hide"|translate}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-if="settings.contentLayouts.videoArchive.sidebar.id">
+            <label>{{'Enable background for sidebar'|translate}}</label>
+            <div>
+                <select data-target="settings.contentLayouts.videoArchive.sidebar.withbg" data-monstro-switch>
+                    <option value="1">{{'Enable'|translate}}</option>
+                    <option value="0">{{"Disabled"|translate}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-if="settings.contentLayouts.videoArchive.sidebar.id && 1 == settings.contentLayouts.videoArchive.sidebar.withbg">
+            <label>{{'Background color'|translate}}</label>
+            <div>
+                <input data-monstro-color-picker data-target="settings.contentLayouts.videoArchive.sidebar.bgColor"/>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-if="settings.contentLayouts.videoArchive.sidebar.id && 1 == settings.contentLayouts.videoArchive.sidebar.withbg">
+            <label>{{'Text color'|translate}}</label>
+            <div>
+                <input data-monstro-color-picker data-target="settings.contentLayouts.videoArchive.sidebar.textColor"/>
+            </div>
+        </div>
+    </div>
+</fieldset>
+</div>

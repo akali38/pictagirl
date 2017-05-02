@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="columns" data-ng-controller="SidebarCtrl" data-ng-include="template()" data-ng-class="classes()" data-ng-if="isLeftSidebar()" data-monstro-sticky="stickySidebarConfig"></div>
+    <div class="columns" data-ng-controller="ContentCtrl" data-ng-class="classes()">
+        <div class="monstro-grid-view row ">
+            <article class="columns" id="post-{{post.id}}" data-ng-class="classes()" data-ng-repeat="post in WPData.posts track by post.id" data-ng-controller="ArticleCtrl" data-ng-include="template()"></article>
+        </div>
+    </div>
+    <div class="columns" data-ng-controller="SidebarCtrl" data-ng-include="template()" data-ng-class="classes()" data-ng-if="isRightSidebar()" data-monstro-sticky="stickySidebarConfig"></div>
+</div>

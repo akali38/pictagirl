@@ -1,0 +1,64 @@
+<div class="archive-title" ng-if="WPData.archiveTitle">
+    <h2 class="post-title" ng-bind-html="WPData.archiveTitle"></h2>
+</div>
+<div class="no-posts" ng-if="!posts.length">
+    <p translate>Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>
+</div>
+<div class="monstro-list-view row" ng-if="posts" infinite-scroll="loadMore()"
+     infinite-scroll-disabled="!(('infinite' == contentLayout.pagination) && WPData.nextPostsLink)" infinite-scroll-distance="2"
+     data-grid-effect="{{contentLayout.postAnimations.grid}}" ng-class="{'grid-effect-disabled':('pagination' == contentLayout.pagination)}">
+    <div class="large-12 columns">
+        <article id="post-{{post.id}}" ng-class="post.postClasses" ng-repeat="post in posts">
+            <header class="entry-header" ng-class="{
+                'no-meta': 'no' == contentLayout.metaPosition,
+                'meta-above': 'above' == contentLayout.metaPosition,
+                'meta-below': 'below' == contentLayout.metaPosition
+            }">
+                <div class="entry-meta monstro-toggleable-element" ng-if="'above' == contentLayout.metaPosition"
+                        ng-include="tdu + '/templates/views/meta.html'"></div>
+                <h2 class="entry-title">
+                    <a ng-href="{{post.permalink}}" title="{{post.post_title}}" rel="bookmark" monstro-html="post.post_title"></a>
+                </h2>
+                <div class="entry-meta monstro-toggleable-element" ng-if="'below' == contentLayout.metaPosition"
+                     ng-include="tdu + '/templates/views/meta.html'"></div>
+                <div class="featimg" ng-if="post.featimg || (1 == settings.votes.enable)">
+                    <a class="image" ng-href="{{post.permalink}}" title="{{'Permalink to'|translate}} {{post.post_title}}"
+                       rel="bookmark" ng-if="post.featimg" ng-class="{'monstro-gif':post.animation}">
+                        <img data-ng-src="{{post.featimg}}"/>
+                        <img data-ng-src="{{post.animation}}" class="animation" ng-if="post.animation"/>
+                    </a>
+                    <div ng-if="1 == settings.votes.enable" monstro-votes icon="settings.votes.icon" votes="post.votes" vote="post.vote"
+                            post-id="post.id"></div>
+                </div>
+            </header>
+            <section class="entry-content">
+                <div class="entry-excerpt" monstro-html="post.post_excerpt"></div>
+            </section>
+            <footer class="entry-footer" ng-if="(1 == contentLayout.showViews) || (1 == contentLayout.showSocial) || (1 == contentLayout.showFullStory)">
+                <div class="row">
+                    <div class="large-8 medium-8 columns monstro-toggleable-element" ng-if="(1 == contentLayout.showViews) || (1 == contentLayout.showSocial)">
+                        <div class="monstro-stats monstro-toggleable-element" ng-if="1 == contentLayout.showViews">
+                            <ul>
+                                <li>
+                                    <strong ng-bind="post.views"></strong>
+                                    <span ng-pluralize count="post.views" when="pluralizeViews"></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="socialicons share monstro-toggleable-element" ng-if="(1 == contentLayout.showSocial)"
+                             monstro-sharing="post.permalink"></div>
+                    </div>
+                    <div class="large-4 medium-4 columns hide-for-small monstro-toggleable-element" ng-if="1 == contentLayout.showFullStory">
+                        <a class="read-more" ng-href="{{post.permalink}}" title="{{post.post_title}}" rel="bookmark" translate>
+                            Full story
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </article>
+        <div class="monstro-pagination" ng-if="('pagination' == contentLayout.pagination) && WPData.havePagination" ng-include="'pagination' | partial"></div>
+        <div class="monstro-load-more" ng-if="('load-more' == contentLayout.pagination) && WPData.havePagination && WPData.nextPostsLink" translate ng-click="loadMore()">
+            Load more
+        </div>
+    </div>
+</div>

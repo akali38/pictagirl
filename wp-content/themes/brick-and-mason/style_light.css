@@ -1,0 +1,58 @@
+body {color:#666; background: #fff;}
+
+a:hover {color: #000;}
+
+/* -----H TAG STUFF----- */
+h1,h2,h3, h4, h5, h6 {color: #333;}
+
+/*---------HEADER STUFF-----------*/
+#headerContainer {border-bottom-color: #f2f2f2; }
+#header {border-bottom-color: #fff;}
+
+#footer #copyright {color: #fff;}
+#footer #copyright a {color: #fff; border-bottom-color: #fff;}
+
+/*-------MAIN NAVIGATION STUFF--------*/
+#dropmenu li a:hover {color: #000;}
+#dropmenu li ul { background: #fff;}
+#dropmenu li.current-menu-item > a,
+#dropmenu li.current-menu-ancestor > a {color: #000;}
+
+/* -----SEARCH STUFF----- */
+#searchform { border-color: #f5f5f5; background: #f5f5f5}
+
+.listing .firstColumn {border-bottom-color: #ececec; }
+
+h2.posttitle, 
+.entrytitle {color: #555;}
+
+#loaderGif,
+#infscr-loading {background:#fff;}
+
+.entrytitle,
+.metaStuff {border-bottom-color: #ececec; }
+
+.metaItem {color: #888;}
+
+#sidebar {background: #fff; background: rgba(255,255,255,.95); }
+
+/* -----COMMENT STUFF----- */
+#commentToggle {background: #ececec; color: #4c4c4c;}
+#commentToggle:hover {background: #ddd;}
+#commentToggle a {color: #4c4c4c;}
+
+.commentmetadata {color:#333;}
+
+blockquote {border-color: #ddd;}
+
+/*---FORM STUFF---*/
+input[type="text"],
+input[type="password"],
+textarea {border-color: #f5f5f5; background: #f5f5f5;}
+
+/* -----CALENDAR STUFF----- */
+#wp-calendar td.pad:hover {background-color:#fff;}
+
+/*----TAG CLOUD WIDGET STUFF-------*/
+.widget_tag_cloud a {color: #fff;}
+.widget_tag_cloud a:hover {background: #555}

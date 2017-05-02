@@ -1,0 +1,34 @@
+<article ng-class="post.postClasses">
+    <header class="entry-header">
+       <h2 class="post-title" ng-bind-html="post.post_title"></h2>
+    </header>
+
+    <section class="entry-content">
+        <div class="entry-content" data-ng-bind-html="post.post_content">
+        </div>
+    </section>
+
+    <footer class="entry-footer" ng-class="{
+            'comments-disabled': !post.commentsOpen
+        }">
+        <div class="row">
+            <div class="large-12 columns monstro-toggleable-element" ng-if="1 == contentLayout.showAuthorBox"
+                 ng-include="tdu + '/templates/views/single/author-box.html'"></div>
+            <div class="columns large-12" ng-if="post.terms.post_tag">
+                <ul class="entry-tags ">
+                    <li class="label">
+                        <span>{{'Related tags:'|translate}}</span>
+                    </li>
+                    <li data-ng-repeat="tag in post.terms.post_tag">
+                        <a ng-href="{{tag.url}}">
+                            {{tag.title}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="monstro-comments" ng-if="post.commentsOpen || post.haveComments || post.havePings"
+             ng-include="tdu + '/templates/views/single/comments/comments.html'" ng-init="comments={currentTab: 'wp'}">
+        </div>
+    </footer>
+</article>

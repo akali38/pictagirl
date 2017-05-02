@@ -1,0 +1,18 @@
+<div class="bootstrap-inside" id="customizable-frontend-box" ng-controller="CustomizerCtrl">
+    <div class="page-header">
+        <a href="javascript:void(0)" ng-click="closeCustomizer()" class="icon-close pull-right"></a>
+        <h3 translate>Customize</h3>
+        <ol class="breadcrumb" ng-show="!isAllSettingsPage()" ng-controller="CustomizerBreadcrumbsCtrl">
+            <li>
+                <a ng-href="{{getAnchor()}}" translate>All settings</a>
+            </li>
+            <li ng-repeat="breadcrumb in breadcrumbs">
+                <a ng-href="{{anchorPrefix() + breadcrumb.slug}}" ng-show="!$last">{{breadcrumb.title}}</a>
+                <span ng-show="$last">{{breadcrumb.title}}</span>
+            </li>
+        </ol>
+    </div>
+    <div class="customizer-scrollable" monstro-customizer-pusher>
+        <div monstro-include="getView()" monstro-include-replace="true"></div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div id="monstro-customizer-teaser" class="bootstrap-inside" ng-controller="CustomizerTeaserCtrl">
+    <a class="btn btn-default" href="javascript:void(0);" ng-click="openCustomizer($event)" translate>Customize your theme</a>
+    <small data-ng-if="haveChanges()">
+        <i class="glyphicon glyphicon-exclamation-sign"></i>
+        <span translate>
+            You have unsaved changes. Your website may appear different to you than it does to your users.
+        </span>
+    </small>
+</div>

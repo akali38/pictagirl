@@ -1,0 +1,21 @@
+<div class="monstro-vote-sticky">
+    <div class="monstro-float-vote">
+        <ul class="{{icon}}" data-monstro-class="getUlClasses()">
+            <li>
+                <a href="javascript:void(0);" ng-click="like()" data-monstro-class="getUpvoteClasses()"
+                   class="good {{#upvoted}}voted{{/upvoted}}">
+                    <span class="icon"></span>
+                </a>
+            </li>
+            <li class="count">
+                <span>{{votes}}</span>
+            </li>
+            <li>
+                <a href="javascript:void(0);" ng-click="dislike()" data-monstro-class="getDownvoteClasses()"
+                   class="meh {{#downvoted}}voted{{/downvoted}}">
+                    <span class="icon"></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

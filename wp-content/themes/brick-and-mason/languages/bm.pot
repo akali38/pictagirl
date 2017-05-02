@@ -1,0 +1,161 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BrickMason\n"
+"POT-Creation-Date: 2012-10-20 00:26-0800\n"
+"PO-Revision-Date: 2012-10-20 00:26-0800\n"
+"Last-Translator: Chris <chris@themolitor.com>\n"
+"Language-Team: The Molitor\n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;_e;_n:1,2;_x:1,2c;_ex:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:3
+msgid "Error 404"
+msgstr ""
+
+#: ../404.php:4
+msgid "Content not found - Try searching?"
+msgstr ""
+
+#: ../archive.php:30 ../blog.php:31 ../category-blog.php:16 ../index.php:34
+msgid "Permanent Link to"
+msgstr ""
+
+#: ../archive.php:33 ../blog.php:54 ../category-blog.php:39 ../index.php:39 ../portfolio_grid.php:46 ../portfolio_masonry.php:50 ../search.php:40
+msgid "Read More"
+msgstr ""
+
+#: ../archive.php:43
+msgid "Not Found"
+msgstr ""
+
+#: ../archive.php:44
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr ""
+
+
+#: ../blog.php:37 ../category-blog.php:22 ../comments.php:11 ../search.php:23 ../single.php:16
+msgid "0 Comments"
+msgstr ""
+
+#: ../blog.php:37 ../category-blog.php:22 ../comments.php:11 ../search.php:23 ../single.php:16
+msgid "1 Comment"
+msgstr ""
+
+#: ../blog.php:37 ../category-blog.php:22 ../comments.php:11 ../search.php:23 ../single.php:16
+msgid "% Comments"
+msgstr ""
+
+#: ../comments.php:3
+msgid "Please do not load this page directly. Thanks!"
+msgstr ""
+
+#: ../comments.php:5
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: ../comments.php:29
+msgid "Leave a Reply"
+msgstr ""
+
+#: ../comments.php:29
+msgid "Leave a Reply to %s"
+msgstr ""
+
+#: ../comments.php:37
+msgid "You must be"
+msgstr ""
+
+#: ../comments.php:37
+msgid "logged in"
+msgstr ""
+
+#: ../comments.php:37
+msgid "to post a comment."
+msgstr ""
+
+#: ../comments.php:43
+msgid "Logged in as"
+msgstr ""
+
+#: ../comments.php:43
+msgid "Log out of this account"
+msgstr ""
+
+#: ../comments.php:43
+msgid "Log out"
+msgstr ""
+
+#: ../comments.php:49
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:49 ../comments.php:54
+msgid "(required)"
+msgstr ""
+
+#: ../comments.php:54
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:59
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:69
+msgid "Submit Comment"
+msgstr ""
+
+#: ../footer.php:26
+msgid "Subscribe via RSS"
+msgstr ""
+
+#: ../functions.php:60
+msgid "Home"
+msgstr ""
+
+#: ../functions.php:91
+msgid "Current Page"
+msgstr ""
+
+#: ../functions.php:119
+msgid "Search Results"
+msgstr ""
+
+#: ../functions.php:121
+msgid "Posts tagged &#39;"
+msgstr ""
+
+#: ../functions.php:127
+msgid "Articles posted by"
+msgstr ""
+
+#: ../functions.php:129
+msgid "Error 404"
+msgstr ""
+
+#: ../functions.php:133
+msgid "Page"
+msgstr ""
+
+#: ../navigation.php:2
+msgid "Next &rarr;"
+msgstr ""
+
+#: ../navigation.php:3
+msgid "&larr; Back"
+msgstr ""
+
+#: ../search.php:55
+msgid "Nothing found - Try a different search?"
+msgstr ""
+
+#: ../searchform.php:7
+msgid "Search Site"
+msgstr ""

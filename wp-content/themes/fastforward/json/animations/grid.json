@@ -1,0 +1,38 @@
+[
+    {
+        "class": "none",
+        "name": "None"
+    },
+    {
+        "class": "fade",
+        "name": "Fade"
+    },
+    {
+        "class": "move-up",
+        "name": "Move up"
+    },
+    {
+        "class": "scale-up",
+        "name": "Scale up"
+    },
+    {
+        "class": "fall-perspective",
+        "name": "Fall perspective"
+    },
+    {
+        "class": "fly",
+        "name": "Fly"
+    },
+    {
+        "class": "flip",
+        "name": "Flip"
+    },
+    {
+        "class": "helix",
+        "name": "Helix"
+    },
+    {
+        "class": "pop-up",
+        "name": "Pop up"
+    }
+]

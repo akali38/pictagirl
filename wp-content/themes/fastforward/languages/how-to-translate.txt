@@ -1,0 +1,44 @@
+There is a wide range of translation tools available in the gettext ecosystem. Some of the are listed on Wikipedia,
+http://en.wikipedia.org/wiki/Gettext#See_also). The general workflow is always the same:
+
+Use the .pot template as the basis for translation. This will generate a new translation catalog (a .po file)
+or updates an existing .po file.
+Translate the strings (and plural forms) in your corresponding language.
+Save the resulting .po and .mo files for the next step.
+
+Transifex
+By far the easiest option to translate is Transifex. This online service lets you get started quickly and does not
+require you (or your translators) to install anything. This service is not free, but there are free plans available for
+open-source projects.
+
+Pootle
+An alternative to Transifex is Pootle, a web interface for translations. Pootle can be rather difficult to setup though.
+
+Poedit
+The poedit application should be installed on your desktop, but is very easy to use (with one small exception).
+Here's a step by step guide:
+
+1. Download and install Poedit, which is available for Windows, Linux and Mac OS X.
+2. Start Poedit and choose the "New Catalog from POT File..."
+3. Open the /languages/en_US.pot file. This will open the "Catalog properties" dialog. Most of these options can be ignored,
+except for the Language and Plural Forms fields:
+
+You can find the correct value for these fields on this page http://docs.translatehouse.org/projects/localization-guide/en/latest/l10n/pluralforms.html?id=l10n/pluralforms.
+Warning: Be sure to check that you don't include a semicolon at the end of the plural-forms value, otherwise Poedit will not show the correct input boxes.
+
+4. Save the new .po file somewhere in the /languages/ folder
+5. Translate the strings.
+6. Save your catalog and continue to the next step
+
+Then you'll need to open wp-config.php file from the root folder of your WordPress install, and replace this line:
+
+define ('WPLANG', '');
+
+with something like:
+
+define ('WPLANG', 'fr_FR');
+
+Then make sure that .mo file from /languages/ folder of our theme has the same name as your language code: "fr_FR.mo"
+
+
+More information you can find here: http://www.catswhocode.com/blog/how-to-make-a-translatable-wordpress-theme

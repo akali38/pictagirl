@@ -1,0 +1,12 @@
+<div class="setting-template-container" ng-controller="SidebarBuilderCtrl">
+    <div class="well well-sm" ng-repeat="sidebar in Sidebars track by sidebar.id">
+        <span>
+            {{sidebar.name}}
+        </span>
+        <i class="glyphicon glyphicon-trash pull-right" ng-click="deleteSidebar(sidebar)"></i>
+    </div>
+    <div class="well well-sm clearfix" ng-show="sidebarsLoaded">
+        <input class="input-sm col-md-8" ng-model="newSidebar" placeholder="{{'Add a new sidebar' | translate}}">
+        <div class="btn btn-primary btn-sm col-md-3 pull-right" translate ng-click="addSidebar()">Add</div>
+    </div>
+</div>

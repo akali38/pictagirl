@@ -1,0 +1,310 @@
+<?php
+    class Featured_Posts_Widget extends WP_Widget {
+
+        public function __construct() {
+            parent::__construct(
+                'monstro_featured_posts_widget',
+                __('Featured Posts', 'monstrotheme'),
+                array('description' => __('Display Featured Posts', 'monstrotheme'),)
+            );
+        }
+
+        function widget( $args , $instance ) {
+            global $before_widget, $after_widget, $before_title, $after_title;
+
+            /* prints the widget*/
+            extract($args, EXTR_SKIP);
+
+            if( isset( $instance['title'] ) ){
+                $title = $instance['title'];
+            }else{
+                $title = '';
+            }
+
+            if( isset( $instance['nr_hot_posts'] ) ){
+                $nr_hot_posts = $instance['nr_hot_posts'];
+            }else{
+                $nr_hot_posts = 0;
+            }
+
+            if( isset( $instance['period'] ) ){
+                $period = $instance['period'];
+            }else{
+                $period = 0;
+            }
+
+            $img_size = empty($instance['img_size']) ? 'thumbnail_size' : apply_filters('widget_img_size', $instance['img_size']);
+
+            echo $before_widget;
+
+            if( !empty( $title ) ){
+                echo $before_title . $title . $after_title;
+            }
+
+        ?>
+           
+            
+            <!-- panel hot posts -->
+            <?php
+            //TODO option substitution
+                if( options::logic( 'likes' , 'enb_likes' ) ){
+                    $nclasses = 'hidden';
+                }else{
+                    $nclasses = '';
+                }
+
+                if( options::logic( 'likes' , 'enb_likes' ) ){
+            ?>
+
+                    <div id="hot_posts_panel" class="tab_menu_content tabs-container">
+                        <?php
+                            $args = array(
+                                'posts_per_page' => $nr_hot_posts,
+                                'post_status' => 'publish' ,
+                                'meta_key' => 'hot_date' ,
+                                
+                                'orderby' => 'meta_value_num' ,
+                                'meta_query' => array(
+                                        array(
+                                            'key' => 'nr_like' ,
+                                            'value' => options::get_value( 'general' , 'min_likes' ) ,
+                                            'compare' => '>=' ,
+                                            'type' => 'numeric',
+                                        ) ),
+                                'order' => 'DESC'
+                            );
+
+
+                            /* today */
+                            if( $period == 0 ){
+                                $today = getdate();
+                                $args['day'] = $today["mday"];
+                            }
+
+                            /* filter - 7 days */
+                            if( $period == 7 ){
+                                add_filter( 'posts_where', array( 'widget_tabber' , 'filter_where_07' ) );
+                            }
+
+                            /* filter - 30 days */
+                            if( $period == 30 ){
+                                add_filter( 'posts_where', array( 'widget_tabber' , 'filter_where_30' ) );
+                            }
+
+                            $wp_query = new WP_Query( $args );
+
+                            /* remove filter - 7 days */
+                            if( $period == 7 ){
+                                remove_filter( 'posts_where', array( 'widget_tabber' , 'filter_where_07' ) );
+                            }
+
+                            /* remove filter - 30 days */
+                            if( $period == 30 ){
+                                remove_filter( 'posts_where', array( 'widget_tabber' , 'filter_where_30' ) );
+                            }
+
+                            /* list posts */
+                            if( $wp_query -> have_posts() ){
+                                echo '<ul class="widget-list">';
+                                foreach( $wp_query -> posts as $post ){
+                                    $wp_query -> the_post();
+                                    self::post( $post, $img_size );
+                                }
+                                echo '</ul>';
+                            }else{
+                                echo '<p>' . __( 'Sorry, no hot posts found.' , 'monstrotheme' ) . '</p>';
+                            }
+
+                            wp_reset_query();
+                        ?>
+                    </div>
+            <?php
+                }else{
+            ?>
+                <div id="hot_posts_panel" class="tab_menu_content tabs-container">
+                     <?php _e('Please enable posts voting','monstrotheme') ?> 
+                </div>
+            <?php
+                }
+            ?>
+
+        <?php
+            echo $after_widget;
+        }
+
+        function update( $new_instance, $old_instance) {
+
+            /*save the widget*/
+            $instance = $old_instance;
+            $instance['title']              = strip_tags( $new_instance['title'] );
+            $instance['nr_hot_posts']       = strip_tags( $new_instance['nr_hot_posts'] );
+            $instance['period']             = strip_tags( $new_instance['period'] );
+            $instance['img_size']           = strip_tags($new_instance['img_size']);
+            
+            return $instance;
+        }
+
+        function form($instance) {
+
+            /* widget form in backend */
+            $instance       = wp_parse_args( (array) $instance, array( 'title' => '' , 'nr_hot_posts' => 10 , 'period' => 7, 'img_size' => 'large_img' ) );
+            $title          = strip_tags( $instance['title'] );
+            $nr_hot_posts   = strip_tags( $instance['nr_hot_posts'] );
+            $period         = strip_tags( $instance['period'] );
+            $img_size       = strip_tags($instance['img_size']);
+            
+    ?>
+
+            <p>
+                <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title','monstrotheme') ?>:
+                    <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+                </label>
+            </p>
+            <p>
+                <label for="<?php echo $this->get_field_id('nr_hot_posts'); ?>"><?php _e( 'Number of featured posts' , 'monstrotheme' ) ?>:
+                    <input class="widefat digit" id="<?php echo $this->get_field_id('nr_hot_posts'); ?>" name="<?php echo $this->get_field_name('nr_hot_posts'); ?>" type="text" value="<?php echo esc_attr( $nr_hot_posts ); ?>" />
+                </label>
+            </p>
+            <p>
+                <label for="<?php echo $this->get_field_id('period'); ?>"><?php _e( 'Period of featured posts' , 'monstrotheme' ) ?>:
+                    <select class="widefat" id="<?php echo $this->get_field_id('period'); ?>" name="<?php echo $this->get_field_name('period'); ?>">
+                    <?php
+                        if( $period == 0 ){
+                            ?><option value="0" selected="selected"><?php _e( 'Today' , 'monstrotheme' ); ?></option><?php
+                        }else{
+                            ?><option value="0"><?php _e( 'Today' , 'monstrotheme' ); ?></option><?php
+                        }
+
+                        if( $period == 7 ){
+                            ?><option value="7" selected="selected"><?php _e( '7 days' , 'monstrotheme' ); ?></option><?php
+                        }else{
+                            ?><option value="7"><?php _e( '7 days' , 'monstrotheme' ); ?></option><?php
+                        }
+
+                        if( $period == 30 ){
+                            ?><option value="30" selected="selected"><?php _e( '30 days' , 'monstrotheme' ); ?></option><?php
+                        }else{
+                            ?><option value="30"><?php _e( '30 days' , 'monstrotheme' ); ?></option><?php
+                        }
+                    ?>
+                    </select>
+                </label>
+            </p>
+            <p>
+                <label for="<?php echo $this->get_field_id('img_size'); ?>"><?php _e('Image size','monstrotheme') ?>:
+                    <select id="<?php echo $this->get_field_id('img_size'); ?>" name="<?php echo $this->get_field_name('img_size'); ?>">
+                        <?php if ($img_size == "large_img") { ?>
+                            <option value="large_img" selected="selected"><?php _e('Large image', 'monstrotheme'); ?></option>
+                        <?php } else { ?>
+                            <option value="large_img"><?php _e('Large image', 'monstrotheme'); ?></option>
+                        <?php } ?>
+                        <?php if ($img_size == "thumbnail_size") { ?>
+                        <option value="thumbnail_size" selected="selected"><?php _e('Thumbnail', 'monstrotheme'); ?></option>
+                        <?php } else { ?>
+                            <option value="thumbnail_size"><?php _e('Thumbnail', 'monstrotheme'); ?></option>
+                        <?php } ?>
+
+                    </select>
+                </label>
+            </p>            
+    <?php
+        }
+
+        /* aditional functions */
+        function post( $post, $img_size ){
+
+            /* featured image */
+            if( get_post_thumbnail_id( $post -> ID ) ){
+                if($img_size == 'thumbnail_size'){
+                    $post_img = wp_get_attachment_image( get_post_thumbnail_id( $post -> ID ) , 'thumbnail' , '' );
+                }else{
+                    $size = 'list_view';
+                    $img_url1 = wp_get_attachment_url( get_post_thumbnail_id( $post -> ID ) , 'full' , '' );
+                    $post_img1 = aq_resize( $img_url1, get_aqua_size($size), get_aqua_size($size, 'height'), true, true); //crop img
+                    $post_img = '<img class="attachment-thumbnail" alt="" src="'. $post_img1 .'">';
+                }
+
+                $cnt_a1 = ' href="' . get_permalink($post -> ID) . '"';
+                $cnt_a2 = ' href="' . get_permalink($post -> ID) . '#comments"';
+                $cnt_a3 = ' class="entry-img" href="' . get_permalink($post -> ID) . '"';
+                
+            }else{
+                $post_img = '<img src="' . get_template_directory_uri() . '/images/no.image.50x50.png" />';
+                $cnt_a1 = ' href="' . get_permalink($post -> ID) . '"';
+                $cnt_a2 = ' href="' . get_permalink($post -> ID) . '#comments"';
+                $cnt_a3 = ' class="entry-img" href="' . get_permalink($post -> ID) . '"';
+            }
+// TODO meta class substitution
+            $likes = meta::get_meta( $post -> ID , 'like' );
+
+            $nr_like = count( $likes );
+        ?>
+            <li>
+
+
+                <article class="row">
+                    <div class="<?php if($img_size == 'thumbnail_size') { echo 'large-4'; } else { echo 'large-12'; } ?> small-12 columns">
+                        <a <?php echo $cnt_a3; ?>><?php echo $post_img; ?></a><!-- post featured image -->
+                    </div>
+                    <div class="<?php if($img_size == 'thumbnail_size') { echo 'large-8'; } else { echo 'large-12'; } ?> small-12 columns">
+                        <h6>
+                            <a <?php echo $cnt_a1; ?>>
+                                <?php
+                                    echo mb_substr( $post -> post_title , 0 , BLOCK_TITLE_LEN );
+                                    if( strlen( $post->post_title ) > BLOCK_TITLE_LEN ) {
+                                        echo '...';
+                                    }
+                                ?>
+                            </a>
+                        </h6>
+                        <div class="widget-meta st">
+                            <ul>
+                                <li class="monstro-comments"><!-- comments -->
+                                    <?php
+                                        if ( $post -> comment_status == 'open' ) {
+                                    ?>
+                                            <a <?php echo $cnt_a2; ?>>
+                                                <i class="icon-comments"></i>
+                                                <span class="comments-count">
+                                                <?php
+                                                    if( options::get_value( 'blog_post' , 'comments_type' ) == 'fb_comments' ) {
+                                                        ?> <fb:comments-count href=<?php echo get_permalink( $post -> ID  ) ?>></fb:comments-count> <?php
+                                                    }else{
+                                                        echo $post -> comment_count . ' ';
+                                                    }
+                                                ?>
+                                                </span>
+                                            </a>
+                                    <?php
+                                        }
+                                    ?>
+                                </li>
+                                <li class="thelike">
+                                    <?php echo like::content($post->ID,$return = false);  ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </li>
+        <?php
+        }
+
+        static function filter_where_30( $where = '' ) {
+            /* posts in the last 30 days */
+            
+            global $wpdb;
+            
+            $where .= " AND  FROM_UNIXTIME(".$wpdb->prefix."postmeta.meta_value)  > '" . date('Y-m-d', strtotime('-30 days')) . "'";
+            return $where;
+        }
+
+        static function filter_where_07( $where = '' ) {
+            /* posts in the last 7 days */
+            global $wpdb;
+            $where .= " AND FROM_UNIXTIME(".$wpdb->prefix."postmeta.meta_value) > '" . date('Y-m-d', strtotime('-7 days')) . "'";
+            return $where;
+        }
+    }
+register_widget( 'Featured_Posts_Widget' );
+?>

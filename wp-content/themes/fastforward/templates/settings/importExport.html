@@ -1,0 +1,45 @@
+<div class="setting-template-container" ng-controller="ImportExportCtrl">
+    <fieldset>
+        <lengend>
+            <h4 translate>Export</h4>
+        </lengend>
+        <div>
+            <div class="form-group">
+                <label translate>Copy this</label>
+                <div>
+                    <textarea onclick="jQuery(this).select()">{{settings|json}}</textarea>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <lengend>
+            <h4 translate>Import</h4>
+        </lengend>
+        <div>
+            <div class="form-group">
+                <label translate>Paste here</label>
+                <div>
+                    <textarea onclick="jQuery(this).select()" ng-model="importField">{{settings|json}}</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <div class="btn btn-default btn-sm" translate ng-click="doImport()">Import</div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <lengend>
+            <h4 translate>Demo content</h4>
+        </lengend>
+        <div>
+            <div class="form-group">
+                <div>
+                    <div class="btn btn-default btn-sm" translate>Import demo content</div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

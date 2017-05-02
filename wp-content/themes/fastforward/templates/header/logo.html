@@ -1,0 +1,19 @@
+<div class="logo">
+    <a ng-href="{{$parent.homeUrl}}/" ng-switch on="settings.header.logo.type">
+        <div class="logo-image" ng-switch-when="image">
+            <img ng-src="{{settings.header.logo.url}}" alt="logo">
+        </div>
+        <div ng-switch-when="text">
+            <h1>{{blogName}}</h1>
+        </div>
+    </a>
+
+    <script>
+        // in case we're on homepage, reload the site on logo click
+        jQuery('.logo').click(function(){
+            var url      = window.location.href;
+            var logoHome = jQuery('.logo > a').attr('href');
+            if (url === logoHome) window.location.href = url;
+        });
+    </script>
+</div>

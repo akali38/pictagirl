@@ -1,0 +1,45 @@
+<ul>
+    <li ng-if="post.terms.category">
+        <ul class="category">
+            <li data-ng-repeat="category in post.terms.category">
+                <a ng-href="{{category.url}}" ng-style="{background:category.color}">
+                    {{category.title}}
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li ng-if="post.terms['video-category']">
+        <ul class="category">
+            <li data-ng-repeat="category in post.terms['video-category']">
+                <a ng-href="{{category.url}}" ng-style="{background:category.color}">
+                    {{category.title}}
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li ng-if="post.terms['gallery-category']">
+        <ul class="category">
+            <li data-ng-repeat="category in post.terms['gallery-category']">
+                <a ng-href="{{category.url}}" ng-style="{background:category.color}">
+                    {{category.title}}
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li>{{'By' | translate}} <a ng-href="{{post.author.url}}">{{post.author.name}}</a></li>
+    <li>{{'on' | translate}} <a ng-href="{{post.date.url}}">{{post.date.text}}</a></li>
+    <li data-ng-if="post.commentsOpen">
+        <a class="comment" ng-href="{{post.permalink}}#comments">
+            <span data-ng-pluralize data-count="post.nrComments" data-when="pluralizeComments"></span>
+        </a>
+    </li>
+    <li ng-if="post.postFormat">
+        <ul class="post-format">
+            <li>
+                <a ng-href="{{post.postFormat.link}}" ng-class="['format-' + post.postFormat.slug]">
+                    {{post.postFormat.string}}
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>

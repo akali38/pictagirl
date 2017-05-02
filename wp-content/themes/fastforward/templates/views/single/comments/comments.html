@@ -1,0 +1,34 @@
+<ul class="comments-tabs" ng-if="post.commentsOpen || post.haveComments || post.havePings">
+    <li id="tab-wp" class="active" ng-class="{active: 'wp' == comments.currentTab}"
+        ng-click="$parent.comments.currentTab = 'wp'"
+        ng-if="post.commentsOpen || post.haveComments || post.havePings">
+        <a href="javascript:void(0)" class="tab active">
+            <span translate>
+                WordPress comments
+            </span>
+            ({{post.nrComments}})
+        </a>
+    </li>
+    <li id="tab-fb" ng-class="{active: 'fb' == comments.currentTab}"
+        ng-click="$parent.comments.currentTab = 'fb'"
+        ng-if="( 1 == contentLayout.enableFacebookComments) && settings.social.fbAppId">
+        <a href="javascript:void(0)" class="tab" translate>
+            Facebook comments
+        </a>
+    </li>
+</ul>
+<div class="comments-wrapper">
+    <div class="wp-comments-tab" ng-include="'comments' | partial" ng-show="'wp' == comments.currentTab"></div>
+    <div id="content-fb" class="fb-comments-tab comments-content" ng-if="contentLayout.enableFacebookComments"
+         ng-show="'fb' == comments.currentTab" parse-fbxml>
+        <div id="comments">
+            <!--<div class="fb-comments" data-href="{{post.permalink}}" data-numposts="5" data-colorscheme="light" data-width="100%"></div>-->
+            <script>
+                if ( jQuery('.single-facebook-comments').length == 0 ) {
+                    jQuery('<fb:comments href="{{post.permalink}}" num_posts="5" width="' + jQuery('#comments').width() + '" height="120" reverse="true" class="single-facebook-comments"></fb:comments>').appendTo('#content-fb #comments');
+                }
+                 // FB.XFBML.parse();
+            </script>
+        </div>
+    </div>
+</div>

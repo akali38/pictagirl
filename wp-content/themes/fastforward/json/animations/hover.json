@@ -1,0 +1,74 @@
+[
+    {
+        "class": "none",
+        "name": "None"
+    },
+    {
+        "class": "instant",
+        "name": "Instant"
+    },
+    {
+        "class": "cover-fade",
+        "name": "Fade"
+    },
+    {
+        "class": "cover-push-right",
+        "name": "Push right"
+    },
+    {
+        "class": "cover-slide-top",
+        "name": "Slide top"
+    },
+    {
+        "class": "revolving-door-left",
+        "name": "Revolving door left"
+    },
+    {
+        "class": "revolving-door-right",
+        "name": "Revolving door right"
+    },
+    {
+        "class": "revolving-door-top",
+        "name": "Revolving door top"
+    },
+    {
+        "class": "revolving-door-bottom",
+        "name": "Revolving door bottom"
+    },
+    {
+        "class": "offset",
+        "name": "Offset"
+    },
+    {
+        "class": "guillotine-reverse",
+        "name": "Guillotine reverse"
+    },
+    {
+        "class": "half-slide",
+        "name": "Half slide"
+    },
+    {
+        "class": "tunnel",
+        "name": "Tunnel"
+    },
+    {
+        "class": "quarter-appear",
+        "name": "Quarter appear"
+    },
+    {
+        "class": "quarter-slide-up",
+        "name": "Quarter slide up"
+    },
+    {
+        "class": "quarter-slide-side",
+        "name": "Quarter slide side"
+    },
+    {
+        "class": "quarter-fall-in",
+        "name": "Quarter fall in"
+    },
+    {
+        "class": "quarter-zoom",
+        "name": "Quarter zoom"
+    }
+]

@@ -1,0 +1,191 @@
+<article ng-controller="SubmitPostCtrl">
+    <header class="entry-header">
+        <h2 class="post-title" translate>Submit a post</h2>
+    </header>
+
+    <section class="entry-content" ng-init="currentTab = 'post'">
+        <div class="entry-content frontend-submit">
+            <ul class="post-format-tabs">
+                <li id="image-tab" ng-class="{
+                    active: 'post' == currentTab
+                }">
+                    <a href="javascript:void(0)" class="tab" ng-click="currentTab = 'post'">
+                        <i class="icon-gallery"></i>{{'Upload image'|translate}}
+                    </a>
+                </li>
+                <li id="video-tab" ng-class="{
+                    active: 'video' == currentTab
+                }">
+                    <a href="javascript:void(0)" class="tab" ng-click="currentTab = 'video'">
+                        <i class="icon-video"></i>{{'Share video'|translate}}
+                    </a>
+                </li>
+            </ul>
+            <div class="uploader-wrapper">
+                <div class="image-tab-content monstro-uploader" ng-show="'post' == currentTab">
+                    <form ng-submit="savePost()" name="submitPost">
+                        <div class="row">
+                            <div class="large-3 columns">
+                                <label for="img_post_title" translate>Title</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <input type="text" ng-model="editedPost.title" id="img_post_title" name="title" required/>
+                                <small class="error" ng-show="submitPost.title.$error.required" translate>Required</small>
+                                <p class="help-block" id="img_post_title_info" translate>Be descriptive or interesting! Mandatory.</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label for="post_upload" translate>Featured image</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <div ng-show="editedPost.featimg.src">
+                                    <img ng-src="{{editedPost.featimg.src}}">
+                                </div>
+                                <input type="file" class="button" ng-file-select="featimgChanged($files[0])" id="post_upload"
+                                       accept="image/*">
+                                <label for="img_url_upload">URL of the image</label>
+                                <input type="text" id="img_url_upload" ng-model="editedPost.img_url_upload"/>
+                                <p class="help-block" id="img_post_title_info" translate>Accepting GIF/JPG/PNG (Max size: 3MB)</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label for="img_post_content" translate>Text content</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <textarea ng-model="editedPost.content" id="img_post_content" value="" rows="15" cols="30"></textarea>
+                                <p class="help-block" id="img_post_content_info" translate>Optional.</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label translate>Category</label>
+                            </div>
+                            <div class="large-9 columns" monstro-json="categories" src="'categories' | jsonEndpoint">
+                                <select ng-model="editedPost.category" name="category" required
+                                        ng-options="category.cat_ID as category.cat_name for (id,category) in categories">
+                                </select>
+                                <small class="error" ng-show="submitPost.category.$error.required" translate>Required</small>
+                                <p class="help-block" id="img_post_category_info">Pick one from the dropdown list.</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label for="img_post_tags">Tags</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <input type="text" ng-model="editedPost.tags" id="img_post_tags" value="" />
+                                <p class="help-block" id="img_post_tags_info">Use comma to separate each tag. E.g. design, FTW, awesome.</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label>Source</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <input type="text" ng-model="editedPost.source" id="img_post_source" value="" />
+                                <p class="help-block" id="img_post_source_info">Example: http://cosmothemes.com</p>
+                            </div>
+
+                            <div class="large-9 large-offset-3 columns">
+                                <div data-alert class="alert-box success radius" ng-show="editedPost.link">
+                                    {{'Your post is awaiting moderation.'|translate}}
+                                    <a href="{{editedPost.link}}">
+                                        {{'View post.'|translate}}
+                                    </a>
+                                </div>
+                                <div data-alert class="alert-box secondary radius" ng-show="!(submitPost.$valid)" translate>
+                                    Please fill all required fields
+                                </div>
+                                <p class="submit blue">
+                                    <input type="submit" id="post_submit" value="{{'Submit for review' | translate}}"
+                                           class="button" ng-disabled="!(submitPost.$valid)">
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="video-tab-content monstro-uploader" ng-show="'video' == currentTab">
+                    <form ng-submit="saveVideoPost()" name="submitVideo">
+                        <div class="row">
+                            <div class="large-3 columns">
+                                <label for="img_post_title" translate>Title</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <input type="text" ng-model="editedPost.title" id="img_post_title" name="title" required/>
+                                <small class="error" ng-show="submitVideo.title.$error.required" translate>Required</small>
+                                <p class="help-block" id="img_post_title_info" translate>Be descriptive or interesting! Mandatory.</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label for="video_embed_or_url" translate>Video</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <textarea ng-model="editedPost.video" id="video_embed_or_url" name="embed" required
+                                          rows="15" cols="30"></textarea>
+                                <small class="error" ng-show="submitVideo.embed.$error.required" translate>Required</small>
+                                <p class="help-block" translate>Please insert the URL or embed code. Youtube, Vimeo etc.</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label for="post_upload" translate>Featured image</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <div ng-show="editedPost.featimg.src">
+                                    <img ng-src="{{editedPost.featimg.src}}">
+                                </div>
+                                <input type="file" class="button" ng-file-select="featimgChanged($files[0])" id="post_upload">
+                                <p class="help-block" id="img_post_title_info" translate>Accepting GIF/JPG/PNG (Max size: 3MB)</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label for="img_post_content" translate>Text content</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <textarea ng-model="editedPost.content" id="img_post_content" value="" rows="15" cols="30"></textarea>
+                                <p class="help-block" id="img_post_content_info" translate>Optional.</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label translate>Category</label>
+                            </div>
+                            <div class="large-9 columns" monstro-json="videoCategories" src="'video-categories' | jsonEndpoint">
+                                <select ng-model="editedPost.videoCategory" ng-options="category.term_id as category.name for category in videoCategories">
+                                </select>
+                                <p class="help-block" id="img_post_category_info">Pick one from the dropdown list.</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label for="img_post_tags">Tags</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <input type="text" ng-model="editedPost.videoTags" id="img_post_tags" value="" />
+                                <p class="help-block" id="img_post_tags_info">Use comma to separate each tag. E.g. design, FTW, awesome.</p>
+                            </div>
+
+                            <div class="large-3 columns">
+                                <label>Source</label>
+                            </div>
+                            <div class="large-9 columns">
+                                <input type="text" name="img_post_source" id="img_post_source" value="" />
+                                <p class="help-block" id="img_post_source_info">Example: http://cosmothemes.com</p>
+                            </div>
+
+                            <div class="large-9 large-offset-3 columns">
+                                <div data-alert class="alert-box success radius" ng-show="editedPost.link">
+                                    {{'Your post is awaiting moderation.'|translate}}
+                                    <a href="{{editedPost.link}}">
+                                        {{'View post.'|translate}}
+                                    </a>
+                                </div>
+                                <div data-alert class="alert-box secondary radius" ng-show="!submitVideo.$valid" translate>
+                                    Please fill all required fields
+                                </div>
+                                <p class="submit blue">
+                                    <input type="submit" id="post_submit" value="{{'Submit for review' | translate}}" class="button" ng-disabled="!submitVideo.$valid">
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>

@@ -1,0 +1,35 @@
+
+    <div class="small-1 hide-for-large columns">
+        <a href="javascript:void(0)" id="trigger" class="menu-trigger" ng-click="openMlMenu($event)"><i class="icon-menu"></i></a>
+    </div>
+
+    <div class="small-5 large-2 columns" ng-include="tdu + '/templates/header/logo.html'" ng-class="{
+        'small-11': (0 == settings.header.showSocialIcons) && (0 == settings.header.loginMenu.show) &&
+                    (0 == settings.header.search.show),
+        'small-8': (((1 == settings.header.showSocialIcons) || (1 == settings.header.loginMenu.show)) &&
+                    (0 == settings.header.search.show)) ||
+                    (((0 == settings.header.showSocialIcons) && (0 == settings.header.loginMenu.show)) &&
+                    (1 == settings.header.search.show)),
+        'small-5': ((1 == settings.header.showSocialIcons) || (1 == settings.header.loginMenu.show)) &&
+                    (1 == settings.header.search.show)
+    }"></div>
+    <div class="should-hide-for-small columns menu-wrapper" ng-include="'menu&location=header_menu' | partial"
+         onload="menusLoaded.counter = menusLoaded.counter + 1" ng-class="{
+            'drop-down': 1 == settings.header.menu.enableDropdownMenu,
+            'large-6': ((1 == settings.header.showSocialIcons) || (1 == settings.header.loginMenu.show)) &&
+                        (1 == settings.header.search.show),
+            'large-8': (((1 == settings.header.showSocialIcons) || (1 == settings.header.loginMenu.show)) &&
+                        (0 == settings.header.search.show)) ||
+                        (((0 == settings.header.showSocialIcons) && (0 == settings.header.loginMenu.show)) &&
+                        (1 == settings.header.search.show)),
+            'large-10': (0 == settings.header.showSocialIcons) && (0 == settings.header.loginMenu.show) &&
+                (0 == settings.header.search.show)
+        }">
+    </div>
+    <div class="small-3 large-2 columns" ng-if="(1 == settings.header.showSocialIcons) || (1 == settings.header.loginMenu.show)">
+        <div class="socialicons monstro-toggleable-element" ng-if="1 == settings.header.showSocialIcons"
+             ng-include="tdu + '/templates/header/social-icons.html'"></div>
+        <div class="login fr monstro-toggleable-element" ng-class="{logged: user.ID}" ng-if="1 == settings.header.loginMenu.show"
+             ng-include="tdu + '/templates/header/login-menu.html'"></div>
+    </div>
+    <div class="small-3 large-2 columns monstro-toggleable-element" ng-if="1 == settings.header.search.show" ng-include="tdu + '/templates/header/search/searchform.html'"></div>

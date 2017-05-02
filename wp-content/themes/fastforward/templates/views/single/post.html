@@ -1,0 +1,77 @@
+<article ng-class="post.postClasses">
+    <header class="entry-header" ng-class="{
+                'no-meta': 'no' == contentLayout.metaPosition,
+                'meta-above': 'above' == contentLayout.metaPosition,
+                'meta-below': 'below' == contentLayout.metaPosition
+            }">
+        <div class="entry-meta monstro-toggleable-element" ng-if="'above' == contentLayout.metaPosition"
+             ng-include="tdu + '/templates/views/meta.html'"></div>
+        <h2 class="post-title" ng-bind-html="post.post_title"></h2>
+        <div class="entry-meta monstro-toggleable-element" ng-if="'below' == contentLayout.metaPosition"
+             ng-include="tdu + '/templates/views/meta.html'"></div>
+        <div class="row margin-bottom-30 monstro-toggleable-element" ng-if="1 == contentLayout.sharingAndStats.showAbove"
+             ng-include="tdu + '/templates/views/single/sharing-and-stats.html'"></div>
+        <div class="featimg" ng-if="post.featimg && ( 1 == contentLayout.showFeaturedImage)" ng-class="{
+            'wp-caption alignnone': post.featimgCaption
+        }">
+            <a class="image" ng-href="{{post.permalink}}" title="{{'Permalink to' | translate}} {{post.post_title}}" rel="bookmark">
+                <img ng-src="{{post.featimg}}" alt="{{post.post_title}}" ng-if="!post.animation"/>
+                <img ng-src="{{post.animation}}" alt="{{post.post_title}}" ng-if="post.animation"/>
+            </a>
+            <p class="wp-caption-text" ng-if="post.featimgCaption" data-ng-bind-html="post.featimgCaption"></p>
+        </div>
+    </header>
+
+    <section class="entry-content">
+        <div class="entry-content" ng-bind-html="post.post_content"></div>
+    </section>
+    <div class="pagenumbers" ng-if="post.linkPage" ng-bind-html="post.linkPage">
+
+    </div>
+    <footer class="entry-footer" ng-class="{
+            'comments-disabled': !(post.haveComments || post.havePings)
+        }">
+        <div class="row monstro-toggleable-element" ng-if="1 == contentLayout.sharingAndStats.showBelow"
+             ng-include="tdu + '/templates/views/single/sharing-and-stats.html'"></div>
+        <div class="row">
+            <div class="columns monstro-toggleable-element" ng-if="1 == contentLayout.showAuthorBox"
+                 ng-include="tdu + '/templates/views/single/author-box.html'"
+                 ng-class="{
+                    'large-6': (1 == contentLayout.showPostSource) && post.meta.postSource,
+                    'large-12': (0 == contentLayout.showPostSource) || !post.meta.postSource
+                }"></div>
+            <div class="columns monstro-toggleable-element" ng-if="(1 == contentLayout.showPostSource) && post.meta.postSource"
+                 ng-class="{
+                    'large-6': 1 == contentLayout.showAuthorBox,
+                    'large-12': 0 == contentLayout.showAuthorBox
+                }">
+                <div class="post-source">
+                    <h5 class="source-title">
+                        <a ng-href="{{post.meta.postSource}}">
+                            {{post.meta.postSource}}
+                        </a>
+                    </h5>
+                </div>
+            </div>
+            <div class="columns large-12" ng-if="post.terms.post_tag">
+                <ul class="entry-tags ">
+                    <li class="label">
+                        <span>{{'Related tags:'|translate}}</span>
+                    </li>
+                    <li ng-repeat="tag in post.terms.post_tag">
+                        <a ng-href="{{tag.url}}">
+                            {{tag.title}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="monstro-comments"  ng-if="post.commentsOpen && post.commentsVisibility > 0 || post.haveComments && post.commentsVisibility > 0 || post.havePings && post.commentsVisibility > 0"
+             ng-include="tdu + '/templates/views/single/comments/comments.html'" ng-init="comments={currentTab: 'wp'}">
+        </div>
+        <div class="related-box monstro-toggleable-element" ng-if="1 == contentLayout.related.show">
+            <h3 id="related-title" translate>Related posts</h3>
+            <div class="monstro-grid-view row" ng-include="'related&taxonomy=' + contentLayout.related.taxonomy | partial"></div>
+        </div>
+    </footer>
+</article>

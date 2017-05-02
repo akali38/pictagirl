@@ -1,0 +1,106 @@
+<div class="setting-template-container" ng-controller="SlugsSettingsCtrl">
+    <fieldset>
+        <lengend>
+            <h4 translate>User pages</h4>
+        </lengend>
+        <div>
+            <div class="form-group">
+                <label translate>Liked posts</label>
+                <div>
+                    <input class="input-sm" type="text" ng-model="settings.slugs.userPages.liked"/>
+                    <div class="help-block">
+                        {{homeUrl + settings.slugs.userPages.liked + '/'}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label translate>Disliked posts</label>
+                <div>
+                    <input class="input-sm" type="text" ng-model="settings.slugs.userPages.disliked"/>
+                    <div class="help-block">
+                        {{homeUrl + settings.slugs.userPages.disliked + '/'}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label translate>Viewed posts</label>
+                <div>
+                    <input class="input-sm" type="text" ng-model="settings.slugs.userPages.viewed"/>
+                    <div class="help-block">
+                        {{homeUrl + settings.slugs.userPages.viewed + '/'}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>
+            <h4 translate>
+                Frontend posting
+            </h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label translate>Add new post</label>
+                <div>
+                    <input class="input-sm" type="text" ng-model="settings.slugs.frontendPosting.addNew"/>
+                    <div class="help-block">
+                        {{homeUrl + settings.slugs.frontendPosting.addNew + '/'}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>
+            <h4>
+                {{'Registration and login'|translate}}
+                <small translate>
+                    If you want to use standard Wordpress URLs for login, logout, registration and password recovery
+                    clean all fields, then reload the page.
+                </small>
+            </h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label translate>Login slug</label>
+                <div>
+                    <input class="input-sm" type="text" ng-model="settings.slugs.login.login"/>
+                    <div class="help-block">
+                        {{homeUrl + settings.slugs.login.login + '/'}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label translate>Logout slug</label>
+                <div>
+                    <input class="input-sm" type="text" ng-model="settings.slugs.login.logout"/>
+                    <div class="help-block">
+                        {{homeUrl + settings.slugs.login.logout + '/'}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label translate>Register slug</label>
+                <div>
+                    <input class="input-sm" type="text" ng-model="settings.slugs.login.register"/>
+                    <div class="help-block">
+                        {{homeUrl + settings.slugs.login.register + '/'}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label translate>Lost password slug</label>
+                <div>
+                    <input class="input-sm" type="text" ng-model="settings.slugs.login.lostPassword"/>
+                    <div class="help-block">
+                        {{homeUrl + settings.slugs.login.lostPassword + '/'}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

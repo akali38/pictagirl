@@ -1,0 +1,205 @@
+<div class="setting-template-container" ng-controller="ContentSettingsCtrl" ng-init="currentSettingsContentLayout = 'post'">
+    <div class="form-group">
+        <label>{{'Width'|translate}}</label>
+        <div>
+            <div data-monstro-image-select="adminImageSelects.layoutWidth" data-target="settings.contentLayouts.page.width"></div>
+        </div>
+    </div>
+
+    <div class="form-group" data-ng-show="'full' != settings.contentLayouts.page.width && 'left' != settings.header.type">
+        <label>{{'Layout position'|translate}}</label>
+        <div>
+            <div data-monstro-image-select="adminImageSelects.layoutPosition" data-target="settings.contentLayouts.page.position"></div>
+        </div>
+    </div>
+
+    <fieldset data-ng-show="'full' != settings.contentLayouts.page.width && 'left' != settings.header.type">
+        <legend>
+            <h4>
+                {{'Boxed version'|translate}}
+                <small>
+                    {{'If enabled it will add a white background for content. We recommend to set a background color in'|translate}}
+                    <a href="themes.php?page=custom-background">{{'Appearence -> Background'|translate}}</a>
+                    {{'for better contrasting visual effect.'|translate}}
+                </small>
+            </h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label>{{'Boxed header'|translate}}</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.contentLayouts.page.boxedHeader">
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{'Boxed content'|translate}}</label>
+                <div>
+                    <select monstro-switch target="settings.contentLayouts.page.boxedContent">
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{'Boxed footer'|translate}}</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.contentLayouts.page.boxedFooter">
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h4>{{'Sidebar'|translate}}</h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label>
+                    {{'Choose sidebar'|translate}}
+                </label>
+                <div>
+                    <select class="input-sm" data-ng-model="settings.contentLayouts.page.sidebar.id" data-ng-options="sidebar.id as sidebar.name for sidebar in sidebars">
+                        <option value="">{{'No sidebar'|translate}}</option>
+                    </select>
+                    <div class="help-block">
+                        {{'You can create sidebars'|translate}}
+                        <a data-ng-href="{{sidebarManagerLink}}">{{'here.'|translate}}</a><br/>
+                        {{'You can add widgets to sidebars'|translate}}
+                        <a target="_blank" data-ng-href="{{widgetsLink}}">{{'here.'|translate}}</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-if="settings.contentLayouts.page.sidebar.id">
+                <label>{{'Sidebar position'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.page.sidebar.position" data-monstro-switch>
+                        <option value="left">{{'Left sidebar'|translate}}</option>
+                        <option value="right">{{'Right sidebar'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-if="settings.contentLayouts.page.sidebar.id">
+                <label>{{'Sidebar size'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.page.sidebar.size" data-monstro-switch>
+                        <option value="1/6">1/6</option>
+                        <option value="1/4">1/4</option>
+                        <option value="1/3">1/3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-if="settings.contentLayouts.page.sidebar.id">
+                <label>{{'Delimited sidebar'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.page.sidebar.delimited" data-monstro-switch>
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-if="settings.contentLayouts.page.sidebar.id && !isAnythingBoxed() && ('full' != settings.contentLayouts.page.width)">
+                <label>{{'Floating sidebar'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.page.sidebar.floating" data-monstro-switch>
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-if="settings.contentLayouts.page.sidebar.id">
+                <label>{{'Hide sidebar on mobile'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.page.sidebar.hideForSmall" data-monstro-switch>
+                        <option value="1">{{'Hide'|translate}}</option>
+                        <option value="0">{{"Don't hide"|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-if="settings.contentLayouts.page.sidebar.id">
+                <label>{{'Enable background for sidebar'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.page.sidebar.withbg" data-monstro-switch>
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{"Disabled"|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-if="settings.contentLayouts.page.sidebar.id && 1 == settings.contentLayouts.page.sidebar.withbg">
+                <label>{{'Background color'|translate}}</label>
+                <div>
+                    <input data-monstro-color-picker data-target="settings.contentLayouts.page.sidebar.bgColor"/>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-if="settings.contentLayouts.page.sidebar.id && 1 == settings.contentLayouts.page.sidebar.withbg">
+                <label>{{'Text color'|translate}}</label>
+                <div>
+                    <input data-monstro-color-picker data-target="settings.contentLayouts.page.sidebar.textColor"/>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h4>{{'Page settings'|translate}}</h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label>{{'Show featured image'|translate}}</label>
+                <div>
+                    <select monstro-switch target="settings.contentLayouts.page.showFeaturedImage">
+                        <option value="1">{{'Show'|translate}}</option>
+                        <option value="0">{{'Hide'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>{{'Meta'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.page.metaPosition" data-monstro-switch>
+                        <option value="no">{{'No meta'|translate}}</option>
+                        <option value="above">{{'Meta above'|translate}}</option>
+                        <option value="below">{{'Meta below'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{'Show author box'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.page.showAuthorBox" data-monstro-switch>
+                        <option value="1">{{'Show'|translate}}</option>
+                        <option value="0">{{'Hide'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>{{'Enable Facebook comments'|translate}}</label>
+                <div>
+                    <select data-target="settings.contentLayouts.page.enableFacebookComments" data-monstro-switch>
+                        <option value="1">{{'Enable'|translate}}</option>
+                        <option value="0">{{'Disable'|translate}}</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

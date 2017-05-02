@@ -1,0 +1,22 @@
+
+    <div class="should-hide-for-small large-5 columns" ng-include="'menu&location=header_menu&half=1' | partial"
+         onload="menusLoaded.counter = menusLoaded.counter + 1" ng-class="{
+            'drop-down': 1 == settings.header.menu.enableDropdownMenu
+         }"></div>
+    <div class="small-1 hide-for-large columns">
+        <a href="javascript:void(0)" id="trigger" class="menu-trigger" ng-click="openMlMenu($event)"><i class="icon-menu"></i></a>
+    </div>
+    <div class="small-5 large-2 columns" ng-include="tdu + '/templates/header/logo.html'"></div>
+    <div class="should-hide-for-small large-5 columns" ng-include="'menu&location=header_menu&half=2' | partial"
+         onload="menusLoaded.counter = menusLoaded.counter + 1" ng-class="{
+            'drop-down': 1 == settings.header.menu.enableDropdownMenu
+         }"></div>
+    <div class="small-3 large-12 columns" ng-if="(1 == settings.header.showSocialIcons) || (1 == settings.header.loginMenu.show)">
+        <div class="socialicons monstro-toggleable-element" ng-if="1 == settings.header.showSocialIcons"
+             ng-include="tdu + '/templates/header/social-icons.html'"></div>
+        <div class="login monstro-toggleable-element" ng-class="{logged: user.ID}" ng-if="1 == settings.header.loginMenu.show"
+             ng-include="tdu + '/templates/header/login-menu.html'"></div>
+    </div>
+    <div class="small-3 large-12 columns" ng-if="1 == settings.header.search.show"
+         ng-include="tdu + '/templates/header/search/searchform.html'">
+    </div>

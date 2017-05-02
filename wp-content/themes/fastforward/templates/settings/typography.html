@@ -1,0 +1,94 @@
+<div class="setting-template-container">
+
+	<fieldset>
+		<legend><h4 translate>General typography</h4></legend>
+		<div>
+			<div class="form-group">
+				<label translate>General font family</label>
+				<div>
+					<select class="input-sm" ng-model="settings.typography.bodyFontFamily">
+						<option value="0" translate>Roboto</option>
+						<option value="1" translate>PT Sans</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label translate>General font size</label>
+				<div>
+					<input type="text" ng-model="settings.typography.bodyFontSize"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label translate>General font weight</label>
+				<div>
+					<select data-monstro-switch data-target="settings.typography.bodyFontWeight">
+						<option value="1" translate>Bold</option>
+						<option value="0" translate>Normal</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+    <fieldset>
+		<legend><h4 translate>Header typography</h4></legend>
+		<div>
+			<div class="form-group">
+				<label translate>Header menu font family</label>
+				<div>
+					<select class="input-sm" ng-model="settings.typography.headerMenuFontFamily">
+						<option value="0" translate>Roboto</option>
+						<option value="1" translate>PT Sans</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label translate>Header menu font size</label>
+				<div>
+					<input type="text" ng-model="settings.typography.headerMenuFontSize"/>
+				</div>
+			</div>
+			<div class="form-group">
+				<label translate>Header menu font weight</label>
+				<div>
+					<select data-monstro-switch data-target="settings.typography.headerMenuFontWeight">
+						<option value="1" translate>Bold</option>
+						<option value="0" translate>Normal</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+    <fieldset>
+        <legend><h4 translate>H1 typography</h4></legend>
+        <div>
+            <div class="form-group">
+                <label translate>H1 font family</label>
+                <div>
+                    <select class="input-sm" ng-model="settings.typography.h1FontFamily">
+                        <option value="0" translate>Roboto</option>
+                        <option value="1" translate>PT Sans</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label translate>H1 font size</label>
+                <div>
+                    <input type="text" ng-model="settings.typography.h1FontSize"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label translate>H1 font weight</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.typography.h1FontWeight">
+                        <option value="1" translate>Bold</option>
+                        <option value="0" translate>Normal</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+
+</div>

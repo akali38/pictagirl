@@ -1,0 +1,1699 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: templates/settings/general.html
+msgid "3D bar bottom"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "3D flip horizontal"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "3D flip vertical"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "3D rotate from bottom"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "3D rotate from left"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "3D rotate in"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "3D rotate out"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "3D sign"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "3D slit"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "400px by default."
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "850px by default."
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Above logo"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Accepting GIF/JPG/PNG (Max size: 3MB)"
+msgstr ""
+
+#: templates/settings/sidebarBuilder.html
+msgid "Add"
+msgstr ""
+
+#: templates/settings/sidebarBuilder.html
+msgid "Add a new sidebar"
+msgstr ""
+
+#: templates/settings/slugs.html
+msgid "Add new post"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "All pages"
+msgstr ""
+
+#: templates/header/search/dropdown.html
+msgid "All posts"
+msgstr ""
+
+#: templates/settings/customizer-box.html
+msgid "All settings"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Animation type"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "Appearence -> Background"
+msgstr ""
+
+#: templates/settings/votes.html
+msgid "Arrow"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Background color"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Be descriptive or interesting! Mandatory."
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Below logo"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Big counter"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Blur"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "Bold"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Bouncy slide in"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "Boxed content"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "Boxed footer"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "Boxed header"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "Boxed version"
+msgstr ""
+
+#: templates/views/meta.html
+msgid "By"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Categories"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Category"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Center expanding line"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Choose sidebar"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Choose your Logo and Navigation layout."
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Classic"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Clickable"
+msgstr ""
+
+#: templates/settings/footer.html
+#: templates/settings/header.html
+msgid "Configure social icons"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Contact email"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Content"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Content Background color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Content Links color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Content Links mouse-over color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Content Text color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Content colors settings"
+msgstr ""
+
+#: templates/settings/importExport.html
+msgid "Copy this"
+msgstr ""
+
+#: templates/settings/footer.html
+msgid "Copyright text"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Corner indicator"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Crop"
+msgstr ""
+
+#: templates/settings/customizer-box.html
+msgid "Customize"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Customize all the pages at once"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Customize pages individually"
+msgstr ""
+
+#: templates/settings/teaser.html
+msgid "Customize your theme"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Default settings"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Delayed 3D rotate"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Delicious public profile URL"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Delimited sidebar"
+msgstr ""
+
+#: templates/settings/importExport.html
+msgid "Demo content"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+#: templates/settings/general.html
+#: templates/settings/header.html
+#: templates/settings/votes.html
+msgid "Disable"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Disabled"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Don't hide"
+msgstr ""
+
+#: templates/settings/footer.html
+#: templates/settings/header.html
+msgid "Don't show"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Dribbble public profile URL"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+#: templates/settings/general.html
+#: templates/settings/header.html
+#: templates/settings/votes.html
+msgid "Enable"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Enable Facebook comments"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Enable background for sidebar"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Enable dropdown menu"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Enable hamburger menu"
+msgstr ""
+
+#: templates/settings/votes.html
+msgid "Enable likes"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Enable sticky header"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Enable vertical align"
+msgstr ""
+
+#: templates/settings/votes.html
+msgid "Equation"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Expand"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Expanding box"
+msgstr ""
+
+#: templates/settings/importExport.html
+msgid "Export"
+msgstr ""
+
+#: templates/settings/social.html
+msgid "Facebook App ID"
+msgstr ""
+
+#: templates/views/single/comments/comments.html
+msgid "Facebook comments"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Facebook profile ID"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Fade"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Fade in and scale up"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+#: templates/settings/header.html
+msgid "Fall"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Fall down"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Featured image"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Fill sides"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Fill up from down"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Fill up from left"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Flat bar top"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Flickr public profile URL"
+msgstr ""
+
+#: templates/settings/content.html
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Flip"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Flip bottom"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Flip top"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Floating sidebar"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Footer"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Footer Background color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Footer Links color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Footer Links mouse-over color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Footer Text color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Footer colors settings"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Force reload"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "From above"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Front page"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Front page view type"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Front page width"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Front-page layout position"
+msgstr ""
+
+#: templates/settings/slugs.html
+msgid "Frontend posting"
+msgstr ""
+
+#: templates/views/grid-view.html
+#: templates/views/list-view.html
+msgid "Full story"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "G+ public profile URL"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Gallery"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Gallery archives"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Gallery image height"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Gallery image size"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "General"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "General font family"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "General font size"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "General font weight"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "General typography"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Google analytics code"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Grid view and thumb view options"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Grid-view images height"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Grid-view images size"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Grid-view images width"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Grid-view resize method"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Grow"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "H1 font family"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "H1 font size"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "H1 font weight"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "H1 typography"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Header"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Header Background color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Header Menu links color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Header Submenu links color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Header Text color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Header colors settings"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "Header menu font family"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "Header menu font size"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "Header menu font weight"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Header type"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "Header typography"
+msgstr ""
+
+#: templates/settings/votes.html
+msgid "Heart"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+#: templates/settings/header.html
+msgid "Hide"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Hide sidebar on mobile"
+msgstr ""
+
+#: templates/settings/votes.html
+msgid "Icon style"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "If enabled it will add a white background for content. We recommend to set a background color in"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "If enabled it will add a white background for front page content. We recommend to set a background color in"
+msgstr ""
+
+#: templates/settings/slugs.html
+msgid "If you want to use standard Wordpress URLs for login, logout, registration and password recovery"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Image"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Image sizes"
+msgstr ""
+
+#: templates/settings/importExport.html
+msgid "Import"
+msgstr ""
+
+#: templates/settings/importExport.html
+msgid "Import demo content"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Import/Export/Demo content"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "In between"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Infinite scroll"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Instagram public profile URL"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Just me"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Latest posts/videos widget resize method"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Layout position"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Left sidebar"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Likes"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "LinkedIn public profile URL"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "List view options"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "List-view images height"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "List-view images size"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "List-view images width"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "List-view resize method"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "List/Grid mouse-over background color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "List/Grid mouse-over text color"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Load default settings"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Load more"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Loading animation"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Login menu"
+msgstr ""
+
+#: templates/settings/slugs.html
+msgid "Login slug"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Logo"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Logo type"
+msgstr ""
+
+#: templates/header/login-menu.html
+msgid "Logout"
+msgstr ""
+
+#: templates/settings/slugs.html
+msgid "Logout slug"
+msgstr ""
+
+#: templates/settings/slugs.html
+msgid "Lost password slug"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Menu"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Menu position"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "Meta"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "Meta above"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "Meta below"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Modal animation"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Move"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Move horizontally"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Move vertically"
+msgstr ""
+
+#: templates/settings/content.html
+#: templates/settings/header.html
+msgid "Newspaper"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "No animation"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "No meta"
+msgstr ""
+
+#: templates/views/grid-view.html
+#: templates/views/list-view.html
+#: templates/views/thumb-view.html
+msgid "No posts found"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+#: templates/settings/footer.html
+msgid "No sidebar"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "None"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "Normal"
+msgstr ""
+
+#: templates/views/404.html
+msgid "Nothing found :("
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Number of columns"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Open door"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Optional."
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "PT Sans"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Page animations"
+msgstr ""
+
+#: templates/settings/content/page.html
+msgid "Page settings"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Pages"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Pages featured image height"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Pages featured image resize method"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Pages featured image size"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Pages featured image width"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Pagination type"
+msgstr ""
+
+#: templates/settings/importExport.html
+msgid "Paste here"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Paste your code here"
+msgstr ""
+
+#: templates/views/grid-view.html
+#: templates/views/list-view.html
+#: templates/views/single/post.html
+#: templates/views/thumb-view.html
+msgid "Permalink to"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Pie"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Pinterest public profile URL"
+msgstr ""
+
+#: templates/settings/content.html
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Play animation"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Please fill all required fields"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Please insert the URL or embed code. Youtube, Vimeo etc."
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Pop"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Post animation"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Post archives"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Post settings"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Post tags background color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Post tags text color"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Posts"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Posts featured image height"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Posts featured image resize method"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Posts featured image size"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Posts featured image width"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Pretty URLs"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Push"
+msgstr ""
+
+#: templates/settings/slugs.html
+msgid "Register slug"
+msgstr ""
+
+#: templates/settings/slugs.html
+msgid "Registration and login"
+msgstr ""
+
+#: templates/views/single/gallery.html
+#: templates/views/single/post.html
+#: templates/views/single/video.html
+msgid "Related posts"
+msgstr ""
+
+#: templates/views/page/page.html
+#: templates/views/single/gallery.html
+#: templates/views/single/post.html
+#: templates/views/single/video.html
+msgid "Related tags:"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Required"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Resize"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Reveal"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Reverse slide out"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Right sidebar"
+msgstr ""
+
+#: templates/settings/typography.html
+msgid "Roboto"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Rotate"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Rotate pusher"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Scale"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Scale and rotate pusher"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Scale down pusher"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Scale up"
+msgstr ""
+
+#: templates/header/search/searchform.html
+msgid "Search"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Search form"
+msgstr ""
+
+#: templates/header/search/dropdown.html
+msgid "Search in"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Search type"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Share video"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Sharing and stats"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+#: templates/settings/footer.html
+#: templates/settings/header.html
+msgid "Show"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Show \"Full story\" link"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Show RSS icon"
+msgstr ""
+
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Show above content"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Show author box"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Show below content"
+msgstr ""
+
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+msgid "Show featured image"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Show login menu"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Show number of views"
+msgstr ""
+
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Show post source"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Show related posts"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Show related posts for"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Show search"
+msgstr ""
+
+#: templates/settings/footer.html
+#: templates/settings/header.html
+msgid "Show social icons"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Show social sharing"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Show/Hide"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Shrink"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Side fall"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Side menu animations"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Sidebar"
+msgstr ""
+
+#: templates/settings/footer.html
+msgid "Sidebar #1"
+msgstr ""
+
+#: templates/settings/footer.html
+msgid "Sidebar #2"
+msgstr ""
+
+#: templates/settings/footer.html
+msgid "Sidebar #3"
+msgstr ""
+
+#: templates/settings/footer.html
+msgid "Sidebar #4"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Sidebar builder"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Sidebar position"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Sidebar size"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Skype Name"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Slide along"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Slide and stick to top"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Slide from the bottom"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Slide from the right"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Slide in on top"
+msgstr ""
+
+#: templates/settings/votes.html
+msgid "Smiley"
+msgstr ""
+
+#: templates/settings/footer.html
+#: templates/settings/header.html
+msgid "Social icons"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Social networks"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Some plugins(especially those that require additional scripts) might misbehave when loaded via AJAX. Try enabling this option if you are having such problems."
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Standard"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Sticky-header Background color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Sticky-header Text color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Sticky-header on posts and video pages"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Styling"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Submit a post"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Submit for review"
+msgstr ""
+
+#: templates/header/login-menu.html
+msgid "Submit image or video"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Super scaled"
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Surrounding borders"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Tags"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Text"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Text color"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Text content"
+msgstr ""
+
+#: templates/settings/votes.html
+msgid "Thumbs"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Title"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Tumblr public profile URL"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Twitter ID"
+msgstr ""
+
+#: templates/settings/all-settings.html
+msgid "Typography"
+msgstr ""
+
+#: templates/settings/header.html
+msgid "Upload an image"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Upload image"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Video"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Video Background color"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Video Text color"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Video archives"
+msgstr ""
+
+#: templates/settings/styling.html
+msgid "Video page color settings"
+msgstr ""
+
+#: templates/settings/content.html
+msgid "Videos"
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "View post."
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Vimeo public profile URL"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Widgets images height"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Widgets images size"
+msgstr ""
+
+#: templates/settings/imagesizes.html
+msgid "Widgets images width"
+msgstr ""
+
+#: templates/settings/content/gallery.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/video.html
+msgid "Width"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Wobble"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "Wobble out"
+msgstr ""
+
+#: templates/views/single/comments/comments.html
+msgid "WordPress comments"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Yahoo public profile URL"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "You can add widgets to sidebars"
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "You can create sidebars"
+msgstr ""
+
+#: templates/settings/teaser.html
+msgid "You have unsaved changes."
+msgstr ""
+
+#: templates/settings/social.html
+msgid "You'll need this if you want Facebook comments."
+msgstr ""
+
+#: templates/views/frontend-submit.html
+msgid "Your post is awaiting moderation."
+msgstr ""
+
+#: templates/settings/teaser.html
+msgid "Your website may appear different to you than it does to your users."
+msgstr ""
+
+#: templates/settings/general.html
+msgid "Youtube"
+msgstr ""
+
+#: templates/customizable-frontend/social/icons.html
+#: templates/settings/social.html
+msgid "Youtube public profile URL"
+msgstr ""
+
+#: templates/settings/slugs.html
+msgid "clean all fields, then reload the page."
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/gallery.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/video.html
+#: templates/settings/content/videoArchive.html
+msgid "for better contrasting visual effect."
+msgstr ""
+
+#: templates/settings/content/frontPage.html
+#: templates/settings/content/galleryArchive.html
+#: templates/settings/content/page.html
+#: templates/settings/content/post.html
+#: templates/settings/content/postArchive.html
+#: templates/settings/content/videoArchive.html
+msgid "here."
+msgstr ""
+
+#: templates/header/logo.html
+msgid "logo"
+msgstr ""
+
+#: templates/views/grid-view.html
+#: templates/views/meta.html
+#: templates/views/thumb-view.html
+msgid "on"
+msgstr ""

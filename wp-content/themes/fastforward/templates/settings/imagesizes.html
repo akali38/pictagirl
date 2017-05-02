@@ -1,0 +1,159 @@
+<div class="setting-template-container" ng-controller="ImageSizesCtrl">
+	<fieldset>
+		<legend><h4 translate>List-view images size</h4></legend>
+		<div>
+			<div class="form-group">
+				<label translate>List-view resize method</label>
+				<div>
+					<select data-monstro-switch data-target="settings.imageSizes.list.crop">
+						<option value="1" translate>Crop</option>
+						<option value="0" translate>Resize</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label translate>List-view images width</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.list.width"/>
+					<div class="help-block" translate>850px by default.</div>
+				</div>
+			</div>
+			<div class="form-group" ng-show="settings.imageSizes.list.crop">
+				<label translate>List-view images height</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.list.height"/>
+					<div class="help-block" translate>400px by default.</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend><h4 translate>Grid-view images size</h4></legend>
+		<div>
+			<div class="form-group">
+				<label translate>Grid-view resize method</label>
+				<div>
+					<select data-monstro-switch data-target="settings.imageSizes.grid.crop">
+						<option value="1" translate>Crop</option>
+						<option value="0" translate>Resize</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label translate>Grid-view images width</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.grid.width"/>
+					<div class="help-block" translate>400px by default.</div>
+				</div>
+			</div>
+			<div class="form-group" ng-show="settings.imageSizes.grid.crop">
+				<label translate>Grid-view images height</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.grid.height"/>
+					<div class="help-block" translate>400px by default.</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+    <fieldset>
+		<legend><h4 translate>Widgets images size</h4></legend>
+		<div>
+			<div class="form-group">
+				<label translate>Latest posts/videos widget resize method</label>
+				<div>
+					<select data-monstro-switch data-target="settings.imageSizes.widgets.crop">
+						<option value="1" translate>Crop</option>
+						<option value="0" translate>Resize</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label translate>Widgets images width</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.widgets.width"/>
+					<div class="help-block" translate>400px by default.</div>
+				</div>
+			</div>
+			<div class="form-group" ng-show="settings.imageSizes.widgets.crop">
+				<label translate>Widgets images height</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.widgets.height"/>
+					<div class="help-block" translate>400px by default.</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend><h4 translate>Posts featured image size</h4></legend>
+		<div>
+			<div class="form-group">
+				<label translate>Posts featured image resize method</label>
+				<div>
+					<select data-monstro-switch data-target="settings.imageSizes.post.crop">
+						<option value="1" translate>Crop</option>
+						<option value="0" translate>Resize</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label translate>Posts featured image width</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.post.width"/>
+					<div class="help-block" translate>850px by default.</div>
+				</div>
+			</div>
+			<div class="form-group" ng-show="settings.imageSizes.post.crop">
+				<label translate>Posts featured image height</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.post.height"/>
+					<div class="help-block" translate>400px by default.</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset>
+		<legend><h4 translate>Pages featured image size</h4></legend>
+		<div>
+			<div class="form-group">
+				<label translate>Pages featured image resize method</label>
+				<div>
+					<select data-monstro-switch data-target="settings.imageSizes.page.crop">
+						<option value="1" translate>Crop</option>
+						<option value="0" translate>Resize</option>
+					</select>
+				</div>
+			</div>
+			<div class="form-group">
+				<label translate>Pages featured image width</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.page.width"/>
+					<div class="help-block" translate>850px by default.</div>
+				</div>
+			</div>
+			<div class="form-group" ng-show="settings.imageSizes.page.crop">
+				<label translate>Pages featured image height</label>
+				<div>
+					<input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.page.height"/>
+					<div class="help-block" translate>400px by default.</div>
+				</div>
+			</div>
+		</div>
+	</fieldset>
+
+    <fieldset>
+        <legend><h4 translate>Gallery image size</h4></legend>
+        <div>
+            <div class="form-group">
+                <label translate>Gallery image height</label>
+                <div>
+                    <input class="input-sm" type="text" numbers-only ng-model="settings.imageSizes.gallery.height"/>
+                    <div class="help-block" translate>400px by default.</div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

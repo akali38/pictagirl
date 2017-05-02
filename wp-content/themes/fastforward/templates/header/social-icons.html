@@ -1,0 +1,12 @@
+<ul class="monstro-social">
+    <li ng-repeat="(class, url) in settings.social.icons" ng-if="url">
+        <a ng-href="{{getSocialIconUrl(class, url)}}" class="{{class}}">
+            <i class="icon-{{class}}"></i>
+        </a>
+    </li>
+    <li ng-if="1 == settings.social.showRss">
+        <a ng-href="{{rssLink}}" class="rss">
+            <i class="icon-rss"></i>
+        </a>
+    </li>
+</ul>

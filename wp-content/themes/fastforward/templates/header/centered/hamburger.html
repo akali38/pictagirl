@@ -1,0 +1,20 @@
+
+    <div class="small-1 large-1 columns">
+        <a href="javascript:void(0)" id="trigger" class="menu-trigger" ng-click="openMlMenu($event)"><i class="icon-menu"></i></a>
+    </div>
+    <div class="small-5 large-7 columns" ng-include="tdu + '/templates/header/logo.html'" ng-class="{
+        'large-7':(1 == settings.header.showSocialIcons) || (1 == settings.header.loginMenu.show),
+        'large-9':!((1 == settings.header.showSocialIcons) || (1 == settings.header.loginMenu.show)) && (1 == settings.header.search.show),
+        'large-11':!((1 == settings.header.showSocialIcons) || (1 == settings.header.loginMenu.show)) && !(1 == settings.header.search.show)
+    }"></div>
+    <div class="small-3 large-2 columns" ng-class="{
+            'large-2':1 == settings.header.search.show,
+            'large-4':!(1 == settings.header.search.show)
+        }">
+        <div class="socialicons monstro-toggleable-element" ng-if="1 == settings.header.showSocialIcons"
+             ng-include="tdu + '/templates/header/social-icons.html'"></div>
+        <div class="login fr monstro-toggleable-element" ng-class="{logged: user.ID}" ng-if="1 == settings.header.loginMenu.show"
+             ng-include="tdu + '/templates/header/login-menu.html'"></div>
+    </div>
+    <div class="small-3 large-2 columns" ng-if="1 == settings.header.search.show"
+         ng-include="tdu + '/templates/header/search/searchform.html'"></div>

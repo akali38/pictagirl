@@ -1,0 +1,207 @@
+<div class="setting-template-container" ng-controller="HeaderSettingsCtrl">
+    <div class="form-group">
+        <label translate>Header type</label>
+        <div>
+            <div data-monstro-image-select="adminImageSelects.header" data-target="settings.header.type"></div>
+            <div class="help-block" translate>
+                Choose your Logo and Navigation layout.
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label translate>Enable sticky header</label>
+        <div>
+            <select data-monstro-switch data-target="settings.header.enableStickyHeader">
+                <option value="1" translate>Enable</option>
+                <option value="0" translate>Disable</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="form-group" data-ng-show="'default' == settings.header.type">
+        <label translate>Enable vertical align</label>
+        <div>
+            <select data-monstro-switch data-target="settings.header.enableVerticalAlign">
+                <option value="1" translate>Enable</option>
+                <option value="0" translate>Disable</option>
+            </select>
+        </div>
+    </div>
+
+    <fieldset>
+        <legend>
+            <h4 translate>Logo</h4>
+        </legend>
+        <div class="">
+            <div class="form-group">
+                <label translate>Logo type</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.header.logo.type">
+                        <option value="text" translate>Text</option>
+                        <option value="image" translate>Image</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-show="'image' == settings.header.logo.type">
+                <label translate>Upload an image</label>
+                <div>
+                    <input type="file" ng-file-select="logoImageChanged($files[0])"/>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h4 translate>Menu</h4>
+        </legend>
+        <div>
+            <div class="form-group" data-ng-show="'centered' == settings.header.type">
+                <label translate>Enable hamburger menu</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.header.menu.enableHamburgerMenu">
+                        <option value="1" translate>Enable</option>
+                        <option value="0" translate>Disable</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-show="!('centered' == settings.header.type && 1 == settings.header.menu.enableHamburgerMenu)">
+                <label translate>Enable dropdown menu</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.header.menu.enableDropdownMenu">
+                        <option value="1" translate>Enable</option>
+                        <option value="0" translate>Disable</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" data-ng-show="'centered' == settings.header.type && 1 == settings.header.menu.enableHamburgerMenu">
+                <label translate>Side menu animations</label>
+                <div>
+                    <select class="input-sm" data-ng-model="settings.mlMenu.animation">
+                        <option value="slide-in-on-top" translate>Slide in on top</option>
+                        <option value="reveal" translate>Reveal</option>
+                        <option value="push" translate>Push</option>
+                        <option value="slide-along" translate>Slide along</option>
+                        <option value="reverse-slide-out" translate>Reverse slide out</option>
+                        <option value="rotate-pusher" translate>Rotate pusher</option>
+                        <option value="3d-rotate-in" translate>3D rotate in</option>
+                        <option value="3d-rotate-out" translate>3D rotate out</option>
+                        <option value="scale-down-pusher" translate>Scale down pusher</option>
+                        <option value="scale-up" translate>Scale up</option>
+                        <option value="scale-and-rotate-pusher" translate>Scale and rotate pusher</option>
+                        <option value="open-door" translate>Open door</option>
+                        <option value="fall-down" translate>Fall down</option>
+                        <option value="delayed-3d-rotate" translate>Delayed 3D rotate</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group" data-ng-show="'centered' == settings.header.type && 1 != settings.header.menu.enableHamburgerMenu">
+                <label translate>Menu position</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.header.menu.position">
+                        <option value="belowLogo" translate>Below logo</option>
+                        <option value="logoInBetween" translate>In between</option>
+                        <option value="aboveLogo" translate>Above logo</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h4 translate>Social icons</h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label translate>Show social icons</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.header.showSocialIcons">
+                        <option value="1" translate>Show</option>
+                        <option value="0" translate>Don't show</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <a ng-href="{{anchorPrefix()}}social" data-ng-show="1 == settings.header.showSocialIcons" class="btn btn-default col-md-12 btn-sm text-left navigation-item">
+                    <i class="back-icon-user"></i>
+                    <span translate>Configure social icons</span>
+                    <i class="glyphicon glyphicon-chevron-right pull-right"></i>
+                </a>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h4 translate>Search form</h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label translate>Show search</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.header.search.show">
+                        <option value="1" translate>Show</option>
+                        <option value="0" translate>Don't show</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" ng-if="(1 == settings.header.search.show) && ('left' != settings.header.type)">
+                <label translate>Search type</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.header.search.type">
+                        <option value="standard" translate>Standard</option>
+                        <option value="clickable" translate>Clickable</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>
+            <h4 translate>Login menu</h4>
+        </legend>
+        <div>
+            <div class="form-group">
+                <label translate>Show login menu</label>
+                <div>
+                    <select data-monstro-switch data-target="settings.header.loginMenu.show">
+                        <option value="1" translate>Show</option>
+                        <option value="0" translate>Hide</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group" ng-show="1 == settings.header.loginMenu.show && 'modal' == settings.header.loginMenu.type">
+                <label translate>Modal animation</label>
+                <div>
+                    <select class="input-sm" ng-model="settings.modal.animation">
+                        <option value="fade-in-and-scale-up" translate>Fade in and scale up</option>
+                        <option value="slide-from-the-right" translate>Slide from the right</option>
+                        <option value="slide-from-the-bottom" translate>Slide from the bottom</option>
+                        <option value="newspaper" translate>Newspaper</option>
+                        <option value="fall" translate>Fall</option>
+                        <option value="side-fall" translate>Side fall</option>
+                        <option value="slide-and-stick-to-top" translate>Slide and stick to top</option>
+                        <option value="3d-flip-horizontal" translate>3D flip horizontal</option>
+                        <option value="3d-flip-vertical" translate>3D flip vertical</option>
+                        <option value="3d-sign" translate>3D sign</option>
+                        <option value="super-scaled" translate>Super scaled</option>
+                        <option value="just-me" translate>Just me</option>
+                        <option value="3d-slit" translate>3D slit</option>
+                        <option value="3d-rotate-from-bottom" translate>3D rotate from bottom</option>
+                        <option value="3d-rotate-from-left" translate>3D rotate from left</option>
+                        <option value="blur" translate>Blur</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

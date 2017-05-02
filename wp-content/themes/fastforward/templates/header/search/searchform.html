@@ -1,0 +1,12 @@
+<div id="searchform" class="searchform" ng-controller="SearchformCtrl" ng-class="{
+            'standard': ('standard' == settings.header.search.type) || ('left' == settings.header.type),
+            'clickable': ('clickable' == settings.header.search.type) && ('left' != settings.header.type),
+            'searchform-open': searchformOpen
+    }">
+    <form id="ui-element" action="javascript:void(0);" method="post" ng-submit="doSearch()">
+        <input class="searchform-input" placeholder="{{'Search' | translate}}" type="search" name="search"
+               id="search" ng-model="searchQuery" autocomplete="off" ng-blur="searchformOpen = false"/>
+        <input class="searchform-submit" type="submit" value="" />
+        <span class="sb-icon-search" ng-click="openSearchform()"></span>
+    </form>
+</div>
